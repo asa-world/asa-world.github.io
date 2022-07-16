@@ -10,7 +10,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #49b1f5;
+  background-color: #302C30;
   background-image: -webkit-linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.4) 25%,
@@ -30,7 +30,7 @@
 
 ::-moz-selection {
   color: #fff;
-  background-color: #49b1f5;
+  background-color: #5C5348;
 }
 /*滚动条结束*/
 
@@ -118,9 +118,57 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 /*夜间模式伪类遮罩层透明*/
 [data-theme="dark"]
   #footer::before{
-     background-color: rgba(0, 0, 0, 0.2)!important;
+     background-color: rgba(9,14,21, 0.2)!important;
     }
 [data-theme="dark"]
   #page-header::before{
-    background-color: rgba(0, 0, 0, 0.4)!important;
+    background-color: rgba(9,14,21, 0.4)!important;
     }
+
+/* 文章页背景 */
+.layout_post>#post {
+    /* 以下代表透明度为0.5 可以自行修改*/
+    background: rgba(0,0,0,.5);
+	border-style: ridge;
+    border-color: rgba(255,255,255,.1);
+	border-width: 1px;
+}
+​
+/* 所有页面背景 */
+#aside_content.card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
+    /* 以下代表透明度为0.5 */
+    background: rgba(9,14,21,.5);
+	border-style: ridge;
+    border-color: rgba(255,255,255,.1);
+	border-width: 1px;
+}
+
+/*侧边栏页面*/
+#aside-content>.card-widget  {
+    background: rgba(9,14,21,.6);
+	border-style: ridge;
+    border-color: rgba(255,255,255,.1);
+	border-width: 1px;
+}
+#aside-content>.sticky_layout>.card-widget{
+    background: rgba(9,14,21,.6);
+	border-style: ridge;
+    border-color: rgba(255,255,255,.1);
+	border-width: 1px;
+}
+/*文章页面*/
+.layout>#post{
+    background: rgba(9,14,21,.6);
+	border-style: ridge;
+    border-color: rgba(255,255,255,.1);
+	border-width: 1px;
+}
+/*分类页面*/
+.layout>#page{
+    
+    background: rgba(9,14,21,.6);
+}
+/*时间轴页面*/
+.layout>#archive{
+    background: rgba(9,14,21,.6);
+}
