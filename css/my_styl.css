@@ -173,7 +173,42 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     background: rgba(9,14,21,.6);
 }
 
-.post-bg>#page-header {
-	background-color: rgba(9,14,21, 0.2)!important;
-	
+#post > div.top-img.gist{
+	display:none;
 }
+
+/*减小目录字体大小*/
+#card-toc {
+	font-size: 85%;
+}
+
+#article-container > p > strong,#article-container > ul > li > strong {
+	color: #FFFFFF;
+}
+
+span.bubble-content {
+	color: 	#7FFFAA;
+	font-weight:normal;
+}
+
+[data-theme="dark"]
+  #post .post-copyright {
+    background-color: rgb(7 8 10);
+    //text-shadow: #bfbeb8 1px 0 4px;
+  }
+[data-theme="dark"]
+  #post .post-copyright {
+    border: 1px solid rgb(19 18 18 / 35%);
+  }
+[data-theme="dark"]
+  .post-copyright-info {
+    color: #e0e0e4;
+  }
+#post .post-copyright__title{
+    font-size:22px;
+}
+#post .post-copyright__notice{
+    font-size:15px;
+}
+
+
