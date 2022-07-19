@@ -177,10 +177,12 @@ span.bubble-content {
 	font-weight:bold;
 }
 
+/* 音乐播放按钮隐藏 */
 #music {
 	visibility:hidden;
 }
 
+/* 首页分类磁贴样式 */
 #categoryBar > ul > li:nth-child(1){
 	background-image: linear-gradient(to right, #35485A, #3B959B);
 }
@@ -199,3 +201,4 @@ span.bubble-content {
 #categoryBar > ul > li:nth-child(6){
 	background-image: linear-gradient(to right, #B72C1B, #BA8820);
 }
+
