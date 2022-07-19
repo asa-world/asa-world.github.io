@@ -202,3 +202,10 @@ span.bubble-content {
 	background-image: linear-gradient(to right, #B72C1B, #BA8820);
 }
 
+#pagination > div {
+	display: none;
+}
+
+#article-container > center > ."tip key" {
+	background-image: linear-gradient(to right, #B72C1B, #BA8820);
+}
