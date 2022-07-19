@@ -177,3 +177,25 @@ span.bubble-content {
 	font-weight:bold;
 }
 
+#music {
+	visibility:hidden;
+}
+
+#categoryBar > ul > li:nth-child(1){
+	background-image: linear-gradient(to right, #35485A, #3B959B);
+}
+#categoryBar > ul > li:nth-child(2){
+	background-image: linear-gradient(to right, #9249B5, #C078C0);
+}
+#categoryBar > ul > li:nth-child(3){
+	background-image: linear-gradient(to right, #563783, #3573A9);
+}
+#categoryBar > ul > li:nth-child(4){
+	background-image: linear-gradient(to right, #1C7A72, #35B566);
+}
+#categoryBar > ul > li:nth-child(5){
+	background-image: linear-gradient(to right, #912460, #BC4898);
+}
+#categoryBar > ul > li:nth-child(6){
+	background-image: linear-gradient(to right, #B72C1B, #BA8820);
+}
