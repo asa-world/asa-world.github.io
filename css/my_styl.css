@@ -125,53 +125,15 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
     background-color: rgba(9,14,21, 0.4)!important;
     }
 
-/* 文章页背景 */
-.layout_post>#post {
-    /* 以下代表透明度为0.5 可以自行修改*/
-    background: rgba(0,0,0,.5);
-	border-style: ridge;
-    border-color: rgba(255,255,255,.1);
-	border-width: 1px;
-}
-​
 /* 所有页面背景 */
-#aside_content.card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
-    /* 以下代表透明度为0.5 */
-    background: rgba(9,14,21,.5);
+.layout_post>#post,.layout>#post,.layout>#page,#category,.layout>#archive,#aside-content>.card-widget,#aside-content>.sticky_layout>.card-widget,#aside_content.card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post {
+    /* 以下代表透明度为0.5 可以自行修改*/
+    background: rgba(9,14,21,.8);
 	border-style: ridge;
     border-color: rgba(255,255,255,.1);
 	border-width: 1px;
 }
 
-/*侧边栏页面*/
-#aside-content>.card-widget  {
-    background: rgba(9,14,21,.6);
-	border-style: ridge;
-    border-color: rgba(255,255,255,.1);
-	border-width: 1px;
-}
-#aside-content>.sticky_layout>.card-widget{
-    background: rgba(9,14,21,.6);
-	border-style: ridge;
-    border-color: rgba(255,255,255,.1);
-	border-width: 1px;
-}
-/*文章页面*/
-.layout>#post{
-    background: rgba(9,14,21,.6);
-	border-style: ridge;
-    border-color: rgba(255,255,255,.1);
-	border-width: 1px;
-}
-/*分类页面*/
-.layout>#page{
-    
-    background: rgba(9,14,21,.6);
-}
-/*时间轴页面*/
-.layout>#archive{
-    background: rgba(9,14,21,.6);
-}
 
 #post > div.top-img.gist{
 	display:none;
@@ -211,4 +173,7 @@ span.bubble-content {
     font-size:15px;
 }
 
+#page > div.tag-cloud-list.is-center > a {
+	font-weight:bold;
+}
 

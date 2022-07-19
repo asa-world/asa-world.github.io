@@ -1,3 +1,4 @@
+audio = new Audio("https://ch-sycdn.kuwo.cn/711cd883aa6a13283d1173aad131b3de/62d57543/resource/n1/71/76/3120959424.mp3 ");
 document.addEventListener('DOMContentLoaded', function () {
   let blogNameWidth, menusWidth, searchWidth, $nav
   let mobileSidebarOpen = false
@@ -494,6 +495,10 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTop: () => { // Back to top
       btf.scrollToDest(0, 500)
     },
+	playmusic: () => { // Back to top
+        audio.play();
+	  
+	},
     hideAsideBtn: () => { // Hide aside
       const $htmlDom = document.documentElement.classList
       $htmlDom.contains('hide-aside')
@@ -507,10 +512,17 @@ document.addEventListener('DOMContentLoaded', function () {
       else window.mobileToc.close()
     }
   }
-
   document.getElementById('rightside').addEventListener('click', function (e) {
     const $target = e.target.id ? e.target : e.target.parentNode
     switch ($target.id) {
+      case 'music':
+		if(audio.currentTime != 0){
+		audio.pause();
+		audio.load();
+	    }else{
+			rightSideFn.playmusic()
+		}
+        break
       case 'go-up':
         rightSideFn.scrollToTop()
         break
