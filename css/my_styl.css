@@ -134,7 +134,7 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 	border-width: 1px;
 }
 
-
+/* 文章页顶部图隐藏 */
 #post > div.top-img.gist{
 	display:none;
 }
@@ -144,10 +144,12 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 	font-size: 85%;
 }
 
+/* 加粗样式美化 */
 #article-container > p > strong,#article-container > ul > li > strong {
 	color: #FFFFFF;
 }
 
+/* 气泡注释样式美化 */
 span.bubble-content {
 	color: 	#7FFFAA;
 	font-weight:normal;
@@ -173,6 +175,7 @@ span.bubble-content {
     font-size:15px;
 }
 
+/* 标签页字体加粗 */
 #page > div.tag-cloud-list.is-center > a {
 	font-weight:bold;
 }
@@ -202,10 +205,17 @@ span.bubble-content {
 	background-image: linear-gradient(to right, #B72C1B, #BA8820);
 }
 
-#pagination > div {
-	display: none;
+/* 弹出框样式统一 */
+/* 颜色设置 */
+[data-theme=light] {
+  --sianx_popup: #1f1f1f;/* 白天 */
 }
-
-#article-container > center > ."tip key" {
-	background-image: linear-gradient(to right, #B72C1B, #BA8820);
+[data-theme=dark] {
+  --sianx_popup: rgba(31,31,31,.9);/* 夜间 */
+}
+.snackbar-pos {
+border-radius: 7px !important;/* 弹窗圆角 */
+}
+.snackbar-container {
+  background: var(--sianx_popup) !important;/* 弹窗颜色 */
 }
