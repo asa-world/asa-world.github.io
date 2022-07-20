@@ -50,6 +50,9 @@
   position: relative !important;
   overflow: visible !important;
   max-height: none !important;
+  border-style: ridge;
+  border-color: rgba(255,255,255,.3);
+  border-width: 2px;
 }
 /* 修复图片出框 */
 .tk-content img {
@@ -74,6 +77,9 @@
   border-bottom: 20px solid transparent;
   border-right: 15px solid #00a6ff; /*默认模式访客气泡小三角配色*/
   border-left: 0px solid transparent;
+  border-style: ridge;
+  border-color: rgba(255,255,255,.3);
+  border-width: 2px;
 }
 .tk-master .tk-content {
   background: #ff8080; /*默认模式博主气泡配色*/
@@ -95,6 +101,7 @@
   border-bottom: 20px solid transparent;
   border-right: 15px solid #ff8080; /*默认模式博主气泡小三角配色*/
   border-left: 0px solid transparent;
+
 }
 .tk-row[data-v-d82ce9a0] {
   max-width: 100%;
