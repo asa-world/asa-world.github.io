@@ -205,9 +205,9 @@ span.bubble-content {
 	background-image: linear-gradient(to right, #B72C1B, #BA8820);
 }
 
-/* 分类磁贴移动端优化 */
+/* 移动端优化 */
 @media screen and (max-width: 800px) {
-    #recent-posts > div:nth-child(1) {
+    #recent-posts > div:nth-child(1),#aside-content > div.card-widget.card-info,#aside-content > div.card-widget.card-announcement,#aside-content > div.sticky_layout > div.card-widget.card-tags {
         display: none;
     }
 }
