@@ -205,6 +205,13 @@ span.bubble-content {
 	background-image: linear-gradient(to right, #B72C1B, #BA8820);
 }
 
+/* 分类磁贴移动端优化 */
+@media screen and (max-width: 800px) {
+    #recent-posts > div:nth-child(1) {
+        display: none;
+    }
+}
+
 /* 弹出框样式统一 */
 /* 颜色设置 */
 [data-theme=light] {
