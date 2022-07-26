@@ -134,8 +134,8 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 	border-width: 1px;
 }
 
-/* 文章页顶部图隐藏 */
-#post > div.top-img.gist{
+/* 文章页顶部图、作者描述隐藏 */
+#post > div.top-img.gist,#aside-content > div.card-widget.card-info > div:nth-child(1) > div.author-info__description{
 	display:none;
 }
 
