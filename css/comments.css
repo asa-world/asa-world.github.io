@@ -66,7 +66,7 @@
 .tk-content a {
   color: #eeecaa; /*默认模式超链接配色*/
 }
-.tk-content::before {
+.tk-content::before{
   content: '';
   width: 0;
   height: 0;
@@ -75,12 +75,13 @@
   left: -13px;
   border-top: 2px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 15px solid #00a6ff; /*默认模式访客气泡小三角配色*/
+  border-right: 10px solid #00a6ff; /*默认模式访客气泡小三角配色*/
   border-left: 0px solid transparent;
   border-style: ridge;
   border-color: rgba(255,255,255,.3);
-  border-width: 2px;
+  border-width: 3px;
 }
+
 .tk-master .tk-content {
   background: #ff8080; /*默认模式博主气泡配色*/
   color: #fff; /*默认模式博主气泡字体配色*/
@@ -101,7 +102,9 @@
   border-bottom: 20px solid transparent;
   border-right: 15px solid #ff8080; /*默认模式博主气泡小三角配色*/
   border-left: 0px solid transparent;
-
+  border-style: ridge;
+  border-color: rgba(255,255,255,.3);
+  border-width: 3px;
 }
 .tk-row[data-v-d82ce9a0] {
   max-width: 100%;
@@ -135,6 +138,14 @@
   border-bottom: 20px solid transparent;
   border-right: 15px solid #000;
   border-left: 0px solid transparent;
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 20px;
+  border-style: ridge;
+  border-color: rgba(255,255,255,.3);
+  border-width: 3px;
 }
 /* 自适应内容 */
 @media screen and (min-width: 1024px) {
