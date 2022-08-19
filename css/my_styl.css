@@ -207,6 +207,9 @@ span.bubble-content {
 #categoryBar > ul > li:nth-child(7){
 	background-image: linear-gradient(to right, #483D8B, #9370DB);
 }
+#categoryBar > ul > li:nth-child(8){
+	background-image: linear-gradient(to right, #008000, #90EE90);
+}
 
 /* 移动端优化 */
 @media screen and (max-width: 800px) {
