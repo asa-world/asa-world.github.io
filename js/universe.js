@@ -4,3 +4,7 @@ dark()
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"){
     Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
   }
+  
+if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"){
+  document.querySelector('#aside-content > div.sticky_layout').style.display = 'none';
+  }
