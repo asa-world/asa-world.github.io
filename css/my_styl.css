@@ -181,7 +181,7 @@ span.bubble-content {
 }
 
 /* 音乐播放按钮隐藏 */
-#music {
+#music, #sentence {
 	visibility:hidden;
 }
 

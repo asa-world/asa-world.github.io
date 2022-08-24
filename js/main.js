@@ -495,9 +495,16 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTop: () => { // Back to top
       btf.scrollToDest(0, 500)
     },
-	playmusic: () => { // Back to top
-        audio.play();
-	  
+	playmusic: () => { 
+        audio.play();	  
+	},
+	sentence: () => {  // 暖心句子
+	  fetch('https://v1.hitokoto.cn/?c=j&c=k&c=e')
+        .then(response => response.json())
+        .then(data => {
+		  Snackbar.show({ text: data.hitokoto +" —— " + data.from , backgroundColor: '#1f1f1f', pos: 'bottom-center',duration: '6000',showAction: false });
+    })
+		
 	},
     hideAsideBtn: () => { // Hide aside
       const $htmlDom = document.documentElement.classList
@@ -515,6 +522,9 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('rightside').addEventListener('click', function (e) {
     const $target = e.target.id ? e.target : e.target.parentNode
     switch ($target.id) {
+      case 'sentence':
+        rightSideFn.sentence()
+        break
       case 'music':
 		if(audio.currentTime != 0){
 		audio.pause();
