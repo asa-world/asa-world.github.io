@@ -530,7 +530,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		audio.pause();
 		audio.load();
 	    }else{
-			rightSideFn.playmusic()
+			setTimeout(function() { rightSideFn.playmusic(); }, 500); 
 		}
         break
       case 'go-up':
