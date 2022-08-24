@@ -1,4 +1,4 @@
-audio = new Audio("https://ch-sycdn.kuwo.cn/711cd883aa6a13283d1173aad131b3de/62d57543/resource/n1/71/76/3120959424.mp3 ");
+audio = new Audio("http://music.163.com/song/media/outer/url?id=1868754919.mp3");
 document.addEventListener('DOMContentLoaded', function () {
   let blogNameWidth, menusWidth, searchWidth, $nav
   let mobileSidebarOpen = false
@@ -503,8 +503,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(response => response.json())
         .then(data => {
 		  Snackbar.show({ text: data.hitokoto +" —— " + data.from , backgroundColor: '#1f1f1f', pos: 'bottom-center',duration: '6000',showAction: false });
-    })
-		
+          })	
 	},
     hideAsideBtn: () => { // Hide aside
       const $htmlDom = document.documentElement.classList
@@ -530,7 +529,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		audio.pause();
 		audio.load();
 	    }else{
-			setTimeout(function() { rightSideFn.playmusic(); }, 500); 
+			rightSideFn.playmusic();
 		}
         break
       case 'go-up':
