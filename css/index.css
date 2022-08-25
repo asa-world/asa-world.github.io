@@ -3803,7 +3803,7 @@ li.categoryBar-list-item {
 }
 #footer-wrap {
   position: relative;
-  padding: 40px 20px;
+  padding: 20px 20px;
   color: var(--light-grey);
   text-align: center;
 }
@@ -3837,7 +3837,7 @@ li.categoryBar-list-item {
   content: '';
 }
 #page-header.full_page {
-  height: 29em;
+  height: 28em;
   background-attachment: fixed;
 }
 #page-header.full_page #site-info {

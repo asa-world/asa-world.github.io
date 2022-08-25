@@ -233,4 +233,6 @@ border-radius: 7px !important;/* 弹窗圆角 */
   background: var(--sianx_popup) !important;/* 弹窗颜色 */
 }
 
-
+#fotid {	
+	line-height: 40%;
+}
