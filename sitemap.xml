@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://asa-world.cn/5f3bb65c/</loc>
+    
+    <lastmod>2022-08-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://asa-world.cn/reading/Journey_Under_the_Midnight_Sun/index.html</loc>
     
     <lastmod>2022-08-29</lastmod>
@@ -435,13 +444,6 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E9%A1%B6%E7%82%B9%E8%AE%A1%E5%88%92/</loc>
-    <lastmod>2022-08-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://asa-world.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
@@ -450,6 +452,13 @@
   
   <url>
     <loc>https://asa-world.cn/tags/bug/</loc>
+    <lastmod>2022-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://asa-world.cn/tags/%E9%A1%B6%E7%82%B9%E8%AE%A1%E5%88%92/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -542,14 +551,14 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/categories/%E6%88%91%E7%94%B5%E4%BD%9C%E4%B8%9A/</loc>
+    <loc>https://asa-world.cn/categories/%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://asa-world.cn/categories/%E9%97%AE%E9%A2%98%E4%BF%AE%E5%A4%8D/</loc>
+    <loc>https://asa-world.cn/categories/%E6%88%91%E7%94%B5%E4%BD%9C%E4%B8%9A/</loc>
     <lastmod>2022-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
