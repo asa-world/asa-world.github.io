@@ -215,9 +215,9 @@ span.bubble-content {
 @media screen and (max-width: 800px) {
     #recent-posts > div:nth-child(1),#aside-content > div.card-widget.card-info,#aside-content > div.card-widget.card-announcement,#aside-content > div.sticky_layout > div.card-widget.card-tags {
         display: none;
-	#web_bg {
-		background: url(https://bu.dusays.com/2022/09/01/630f88ad8aec8.jpg);
 	}
+	#web_bg {
+		background: url(https://bu.dusays.com/2022/09/01/630f88ad8aec8.jpg) !important;
     }
 }
 
