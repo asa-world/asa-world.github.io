@@ -452,20 +452,6 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E4%BF%A1%E7%BD%91/</loc>
-    <lastmod>2022-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://asa-world.cn/tags/%E5%BE%AE%E5%B5%8C/</loc>
-    <lastmod>2022-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://asa-world.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -480,6 +466,20 @@
   </url>
   
   <url>
+    <loc>https://asa-world.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E4%BF%A1%E7%BD%91/</loc>
+    <lastmod>2022-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://asa-world.cn/tags/%E5%BE%AE%E5%B5%8C/</loc>
+    <lastmod>2022-09-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://asa-world.cn/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -487,14 +487,14 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E9%A1%B6%E7%82%B9%E8%AE%A1%E5%88%92/</loc>
+    <loc>https://asa-world.cn/tags/bug/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/bug/</loc>
+    <loc>https://asa-world.cn/tags/%E9%A1%B6%E7%82%B9%E8%AE%A1%E5%88%92/</loc>
     <lastmod>2022-09-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

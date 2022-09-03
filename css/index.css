@@ -3502,6 +3502,15 @@ h1.page-title + .tag-cloud-list {
   font-weight: normal;
   font-style: normal;
 }
+@media screen and (max-width: 800px) {
+  #page > div.business-center > div > div {
+    -webkit-transform: scale(0.7, 0.7);
+    -moz-transform: scale(0.7, 0.7);
+    -o-transform: scale(0.7, 0.7);
+    -ms-transform: scale(0.7, 0.7);
+    transform: scale(0.7, 0.7);
+  }
+}
 @-moz-keyframes business-flip {
   0%, 100% {
     -webkit-transform: rotateY(0deg);
