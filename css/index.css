@@ -3503,7 +3503,7 @@ h1.page-title + .tag-cloud-list {
   font-style: normal;
 }
 @media screen and (max-width: 800px) {
-  #page > div.business-center > div > div {
+  #page > div.business-center {
     -webkit-transform: scale(0.7, 0.7);
     -moz-transform: scale(0.7, 0.7);
     -o-transform: scale(0.7, 0.7);
