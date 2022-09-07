@@ -1,7 +1,7 @@
 /* Twikoo评论框高度设置 */
 .el-textarea__inner {
     min-height: 180px !important;
-  }
+}
   
 /* Twikoo评论框添加背景图*/
 .el-textarea {
@@ -37,6 +37,7 @@
 .tk-comments-container .tk-submit {
   position: relative;
   left: -70px;
+  width: 110%;
 }
 /* 评论块气泡化修改 */
 .tk-content {
@@ -147,15 +148,17 @@
   border-color: rgba(255,255,255,.3);
   border-width: 3px;
 }
-/* 自适应内容 */
+
+/* pc屏自适应内容 */
 @media screen and (min-width: 1024px) {
-  /* 设置宽度上限，避免挤压博主头像 */
+  /* 设置宽度下限，避免挤压博主头像 */
   .tk-content {
     max-width: 75%;
     width: fit-content;
   }
   .tk-master .tk-content {
     width: 75%;
+	left: calc(75% - 520px);
   }
   .tk-master .tk-content::before {
     left: 100%;
@@ -169,9 +172,9 @@
   .tk-master .tk-row[data-v-d82ce9a0] {
     position: relative;
     top: 0px;
-    left: calc(75% - 230px);
+    left: calc(75% - 190px);
   }
-  [data-theme="dark"] .tk-master .tk-content::before {
+[data-theme="dark"] .tk-master .tk-content::before {
     border-left: 15px solid #000;
     border-right: 0px solid transparent;
   }
