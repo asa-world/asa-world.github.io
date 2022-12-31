@@ -1,15 +1,26 @@
+//粒子背景
 function dark() {window.requestAnimationFrame=window.requestAnimationFrame||window.mozRequestAnimationFrame||window.webkitRequestAnimationFrame||window.msRequestAnimationFrame;var n,e,i,h,t=.05,s=document.getElementById("universe"),o=!0,a="180,184,240",r="226,225,142",d="226,225,224",c=[];function f(){n=window.innerWidth,e=window.innerHeight,i=.216*n,s.setAttribute("width",n),s.setAttribute("height",e)}function u(){h.clearRect(0,0,n,e);for(var t=c.length,i=0;i<t;i++){var s=c[i];s.move(),s.fadeIn(),s.fadeOut(),s.draw()}}function y(){this.reset=function(){this.giant=m(3),this.comet=!this.giant&&!o&&m(10),this.x=l(0,n-10),this.y=l(0,e),this.r=l(1.1,2.6),this.dx=l(t,6*t)+(this.comet+1-1)*t*l(50,120)+2*t,this.dy=-l(t,6*t)-(this.comet+1-1)*t*l(50,120),this.fadingOut=null,this.fadingIn=!0,this.opacity=0,this.opacityTresh=l(.2,1-.4*(this.comet+1-1)),this.do=l(5e-4,.002)+.001*(this.comet+1-1)},this.fadeIn=function(){this.fadingIn&&(this.fadingIn=!(this.opacity>this.opacityTresh),this.opacity+=this.do)},this.fadeOut=function(){this.fadingOut&&(this.fadingOut=!(this.opacity<0),this.opacity-=this.do/2,(this.x>n||this.y<0)&&(this.fadingOut=!1,this.reset()))},this.draw=function(){if(h.beginPath(),this.giant)h.fillStyle="rgba("+a+","+this.opacity+")",h.arc(this.x,this.y,2,0,2*Math.PI,!1);else if(this.comet){h.fillStyle="rgba("+d+","+this.opacity+")",h.arc(this.x,this.y,1.5,0,2*Math.PI,!1);for(var t=0;t<30;t++)h.fillStyle="rgba("+d+","+(this.opacity-this.opacity/20*t)+")",h.rect(this.x-this.dx/4*t,this.y-this.dy/4*t-2,2,2),h.fill()}else h.fillStyle="rgba("+r+","+this.opacity+")",h.rect(this.x,this.y,this.r,this.r);h.closePath(),h.fill()},this.move=function(){this.x+=this.dx,this.y+=this.dy,!1===this.fadingOut&&this.reset(),(this.x>n-n/4||this.y<0)&&(this.fadingOut=!0)},setTimeout(function(){o=!1},50)}function m(t){return Math.floor(1e3*Math.random())+1<10*t}function l(t,i){return Math.random()*(i-t)+t}f(),window.addEventListener("resize",f,!1),function(){h=s.getContext("2d");for(var t=0;t<i;t++)c[t]=new y,c[t].reset();u()}(),function t(){document.getElementsByTagName('html')[0].getAttribute('data-theme')=='dark'&&u(),window.requestAnimationFrame(t)}()};
-dark()
+
+function hideTodayCard() {
+    document.getElementById("todayCard") && document.getElementById("todayCard").classList.add("hide")
+}
+$(".topGroup").hover((function() {}
+), (function() {
+        document.getElementById("todayCard").classList.remove("hide"),
+        document.getElementById("todayCard").style.zIndex = 1
+    }
+))
 
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
     Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
+	dark();
   }
   
 if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"||window.location.href == "http://asa-world.cn/categories/"){
   document.querySelector('#aside-content > div.sticky_layout').style.display = 'none';
   }
 
-   
+
 function show_date_time(){
     window.setTimeout("show_date_time()", 1000);
     BirthDay=new Date("1/20/2022 0:0:0");
@@ -49,4 +60,46 @@ function percent() {
   result <= 99 || (result = 99), (btn.innerHTML = result);
 }
 
-document.getElementById("page-name").innerText = document.title.split(" | asa-world")[0];;
+document.getElementById("page-name").innerText = document.title.split(" | asa-world")[0];
+
+//判断时间
+let date=new Date();
+if(date.getHours()>=0&&date.getHours()<12){
+  document.getElementById("author-info__sayhi").innerText ="上午好! 我是";
+}else if(date.getHours()>=12&&date.getHours()<18){
+  document.getElementById("author-info__sayhi").innerText="下午好! 我是";
+}else{
+  document.getElementById("author-info__sayhi").innerText="晚上好! 我是";
+}
+/*
+var s = document.querySelectorAll(".article-meta.tags>a");
+
+var i;
+for (i = 0; i < s.length; i++) {
+	s[i].innerHTML = "#"+s[i].textContent;
+}*/
+
+
+var s = document.querySelectorAll(".article-meta.tags>a");//获取指定元素
+var i;
+for (i = 0; i < s.length; i++) {
+	var para = document.createElement("a");//新建标签元素
+	var txt = document.createTextNode("#");//文本元素
+	para.appendChild(txt);
+	s[i].parentNode.insertBefore(para,s[i]);
+}
+
+
+//随便逛逛
+hexo.extend.generator.register('random', function (locals) {
+    const config = hexo.config.random || {}
+    const posts = []
+    for (const post of locals.posts.data) {
+        if (post.random !== false) posts.push(post.path)
+    }
+    return {
+        path: config.path || 'zhheo/random.js',
+        data: `var posts=${JSON.stringify(posts)};function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};`
+    }
+})
+
