@@ -1,7 +1,3 @@
-#page-header,
-#page-header:before {
-  background: transparent !important;
-}
 #page-header.post-bg,
 #page-header.not-home-page {
   height: 280px !important;

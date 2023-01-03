@@ -11,16 +11,103 @@ $(".topGroup").hover((function() {}
     }
 ))
 
+/*文章页顶部图主题色设置*/
+var type = document.querySelector("meta[property='og:type']").content;
+if(type == 'article'){
+	console.log(type);
+	var color = document.getElementsByTagName('meta')['img-color'].content;
+	document.querySelector('#page-header.post-bg').style.setProperty('background-color',color,'important');
+	document.querySelector('#weidiv').style.setProperty('box-shadow',"110px -130px 300px 60px"+color+"inset");
+}
+
+
+
+
+
+
+/*
+function mouseScrollDirection ( fn ) {
+    var beforeScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+    fn = fn || function() {};
+    window.addEventListener('scroll', function() {
+        var afterScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
+            delta = afterScrollTop - beforeScrollTop;
+        if( delta === 0 ) return false;
+        fn( delta > 0 ? 'down' : 'up' );
+        beforeScrollTop = afterScrollTop;
+    }, false);
+}
+
+mouseScrollDirection(function(direction) {
+	if(direction == 'up'){
+		document.querySelector('#nav *::after').style.setProperty('background-color','transparent','important');
+		document.querySelector('#nav').style.setProperty('backdrop-filter','saturate(180%),blur(20px)');
+
+	}else{
+		document.querySelector('#nav *::after').style.setProperty('background-color','transparent','important');
+		document.querySelector('#nav').style.setProperty('backdrop-filter','saturate(180%),blur(20px)');
+	}      
+});*/
+
+/*nav设置*/
+//获取滚动条距离顶部位置
+function getScrollTop() {
+    var scrollTop = 0;
+    if (document.documentElement && document.documentElement.scrollTop) {
+        scrollTop = document.documentElement.scrollTop;
+    } else if (document.body) {
+        scrollTop = document.body.scrollTop;
+    }
+    if(!scrollTop){
+	//document.querySelector('#nav *::after').style.backgroundColor="";
+	document.querySelector('#nav').style.background='transparent';
+	document.querySelector('#nav').style.backdropFilter='';
+	}
+	else{
+		document.querySelector('#nav').style.background='rgba(18,18,18,0.8)';
+		document.querySelector('#nav').style.backdropFilter='saturate(180%) blur(15px)';
+	}
+}
+self.setInterval("getScrollTop()",1000);
+
+/*看星星页的bgm*/
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
     Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
 	dark();
   }
-  
+
+/*分类页的bgm*/
 if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"||window.location.href == "http://asa-world.cn/categories/"){
   document.querySelector('#aside-content > div.sticky_layout').style.display = 'none';
+  document.querySelector('#page > div.category-lists > ul').style.display = 'none';
+  document.querySelector('.aside-content').style.display = 'none';
+  document.querySelector("#page > div.category-lists > div.category-title.is-center").innerHTML = '专栏';
+  var category_lists = document.querySelectorAll("#page > div.category-lists > ul > li");
+  var i;
+  var create_li = document.querySelector("#page > div.category-lists > div.is-center.tag-cloud-list")
+  for(i=0 ; i<category_lists.length ; i++){
+	 let a0 = document.createElement('a');
+	 a0.innerHTML = '<span class="tags-punctuation">#</span><p style="display: inline-block; margin: auto;">haha</p><span class="tagsPageCount">num</span>';
+     a0.href = category_lists[i].childNodes[0].href;
+	 a0.childNodes[1].innerHTML = category_lists[i].childNodes[0].innerHTML;
+	 a0.childNodes[2].innerHTML = category_lists[i].childNodes[1].innerHTML;	 
+	 create_li.insertAdjacentElement('beforeend',a0);  
   }
 
+ }
 
+if(window.location.href == "http://localhost:4000/archives/"||window.location.href == "https://asa-world.github.io/archives/"||window.location.href == "https://asa-world.cn/archives/"||window.location.href == "http://asa-world.cn/archives/"){
+  document.querySelector("#site-title").style.display = 'none';
+  document.querySelector("#content-inner").style.marginTop = '-20em';
+  document.querySelector("#archive").style.width = '90%'
+
+}
+
+if(document.querySelector('.aside-content').style.display == 'none'){
+	  document.querySelector('#page').style.margin = 'auto';
+}
+
+/*页脚显示运行时间*/
 function show_date_time(){
     window.setTimeout("show_date_time()", 1000);
     BirthDay=new Date("1/20/2022 0:0:0");
@@ -62,14 +149,76 @@ function percent() {
 
 document.getElementById("page-name").innerText = document.title.split(" | asa-world")[0];
 
+/*关于页的文字滚动*/
+if(window.location.href == "http://localhost:4000/about/"||window.location.href == "https://asa-world.github.io/about/"||window.location.href == "https://asa-world.cn/about/"||window.location.href == "http://asa-world.cn/about/"){
+	let mask_items = document.querySelectorAll('.mask > span')
+	var i = 0;
+	var j = 1;
+	self.setInterval("set_Attribute()",2000);
+
+	function set_Attribute(){
+		mask_items[i].setAttribute("data-up","data-up");
+		mask_items[j].setAttribute("data-show","data-show");
+		delete_Attribute();	
+		if(i==mask_items.length-1){i = 0;}
+		else{i++;}
+		if(j==mask_items.length-1){j = 0;}
+		else{j++;}
+
+	}
+	function delete_Attribute(){
+		if(i==0){
+		  mask_items[mask_items.length-1].removeAttribute("data-up");
+		  mask_items[j-1].removeAttribute("data-show");		
+		}
+		else{	if(j==0){
+		  mask_items[i-1].removeAttribute("data-up");
+		  mask_items[mask_items.length-1].removeAttribute("data-show");		
+		}
+		else{
+		  mask_items[i-1].removeAttribute("data-up");
+		  mask_items[j-1].removeAttribute("data-show");		
+		}
+		
+		}
+		
+	}
+
+	/*关于页的网站信息*/
+	document.getElementById("a_count").innerText =document.getElementById("article_c").textContent;
+	document.getElementById("le_count").innerText =document.getElementById("word_c").textContent;
+	document.getElementById("site_count").innerText = "计算中";
+	document.getElementById("last_t").innerText = "计算中";
+	document.getElementById("last_g").innerText = "翻阅中"
+	//setTimeout(function() {document.getElementById("site_count").innerText =document.getElementById("busuanzi_value_site_pv").textContent;}, 5000); 
+	//setTimeout(function() {}, 5000); 
+	self.setInterval("updata_site_info()",2000);
+
+	function updata_site_info(){
+		var a = document.getElementById("busuanzi_value_site_pv").textContent;
+		var b = document.getElementById("last-push-date").textContent;
+		var c = document.querySelector("#span_dt_dt>font").textContent;
+		if(a>0){
+			document.getElementById("site_count").innerText =a;
+		}
+		if(typeof b === 'string'){
+			document.getElementById("last_g").innerText =b;
+		}
+		if(typeof c === 'string'){
+			document.getElementById("last_t").innerText =c+"天";
+		}
+	}
+}
+
+
 //判断时间
 let date=new Date();
 if(date.getHours()>=0&&date.getHours()<12){
   document.getElementById("author-info__sayhi").innerText ="上午好! 我是";
 }else if(date.getHours()>=12&&date.getHours()<18){
-  document.getElementById("author-info__sayhi").innerText="下午好! 我是";
+  document.getElementById("author-info__sayhi").innerText = "下午好! 我是";
 }else{
-  document.getElementById("author-info__sayhi").innerText="晚上好! 我是";
+  document.getElementById("author-info__sayhi").innerText = "晚上好! 我是";
 }
 /*
 var s = document.querySelectorAll(".article-meta.tags>a");
@@ -79,27 +228,15 @@ for (i = 0; i < s.length; i++) {
 	s[i].innerHTML = "#"+s[i].textContent;
 }*/
 
-
+//首页标签前加#
 var s = document.querySelectorAll(".article-meta.tags>a");//获取指定元素
 var i;
 for (i = 0; i < s.length; i++) {
 	var para = document.createElement("a");//新建标签元素
-	var txt = document.createTextNode("#");//文本元素
+	var txt = document.createTextNode(" #");//文本元素
 	para.appendChild(txt);
 	s[i].parentNode.insertBefore(para,s[i]);
 }
 
 
-//随便逛逛
-hexo.extend.generator.register('random', function (locals) {
-    const config = hexo.config.random || {}
-    const posts = []
-    for (const post of locals.posts.data) {
-        if (post.random !== false) posts.push(post.path)
-    }
-    return {
-        path: config.path || 'zhheo/random.js',
-        data: `var posts=${JSON.stringify(posts)};function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};`
-    }
-})
 
