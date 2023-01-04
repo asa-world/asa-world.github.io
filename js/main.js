@@ -1,4 +1,3 @@
-audio = new Audio("http://music.163.com/song/media/outer/url?id=1868754919.mp3");
 document.addEventListener('DOMContentLoaded', function () {
   let blogNameWidth, menusWidth, searchWidth, $nav
   let mobileSidebarOpen = false
@@ -496,9 +495,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollToTop: () => { // Back to top
       btf.scrollToDest(0, 500)
     },
-	playmusic: () => { 
-        audio.play();	  
-	},
+
 	sentence: () => {  // 暖心句子
 	  fetch('https://v1.hitokoto.cn/?c=j&c=k&c=e')
         .then(response => response.json())
@@ -524,14 +521,6 @@ document.addEventListener('DOMContentLoaded', function () {
     switch ($target.id) {
       case 'sentence':
         rightSideFn.sentence()
-        break
-      case 'music':
-		if(audio.currentTime != 0){
-		audio.pause();
-		audio.load();
-	    }else{
-			rightSideFn.playmusic();
-		}
         break
       case 'go-up':
         rightSideFn.scrollToTop()

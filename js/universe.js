@@ -16,8 +16,7 @@ var type = document.querySelector("meta[property='og:type']").content;
 if(type == 'article'){
 	console.log(type);
 	var color = document.getElementsByTagName('meta')['img-color'].content;
-	document.querySelector('#page-header.post-bg').style.setProperty('background-color',color,'important');
-	document.querySelector('#weidiv').style.setProperty('box-shadow',"110px -130px 300px 60px"+color+"inset");
+	document.documentElement.style.setProperty('--asa-main',color);
 }
 
 
@@ -58,7 +57,7 @@ function getScrollTop() {
     } else if (document.body) {
         scrollTop = document.body.scrollTop;
     }
-    if(!scrollTop){
+    if(!scrollTop && (document.querySelector('.is-top-bar')==null)){
 	//document.querySelector('#nav *::after').style.backgroundColor="";
 	document.querySelector('#nav').style.background='transparent';
 	document.querySelector('#nav').style.backdropFilter='';
@@ -68,7 +67,7 @@ function getScrollTop() {
 		document.querySelector('#nav').style.backdropFilter='saturate(180%) blur(15px)';
 	}
 }
-self.setInterval("getScrollTop()",1000);
+self.setInterval("getScrollTop()",500);
 
 /*看星星页的bgm*/
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
