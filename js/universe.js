@@ -88,11 +88,11 @@ function getScrollTop() {
 }
 self.setInterval("getScrollTop()",500);
 
-/*看星星页的bgm*/
+/*看星星页的bgm
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
     Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
 	dark();
-  }
+  }*/
 
 /*分类页的bgm*/
 if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"||window.location.href == "http://asa-world.cn/categories/"){
