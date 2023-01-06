@@ -88,11 +88,25 @@ function getScrollTop() {
 }
 self.setInterval("getScrollTop()",500);
 
-/*看星星页的bgm
+/*看星星页的bgm*/
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
-    Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
-	dark();
-  }*/
+    dark();
+	/*
+	//const image = document.createElement('img');
+	//image.src  = 'https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/Lighthouse-ys.jpg';
+	//document.querySelector("#content-inner").appendChild(image)
+	//Snackbar.show({ text: '这里可以播放BGM哦',backgroundColor: '#1f1f1f', pos: 'bottom-right',duration: '3000',showAction: false });
+    //判断手机横竖屏状态：
+    function hengshuping(){
+    if(window.orientation==180||window.orientation==0){
+alert("竖屏状态！")
+}
+if(window.orientation==90||window.orientation==-90){
+alert("横屏状态！")
+}
+}
+   hengshuping();*/
+  }
 
 /*分类页的bgm*/
 if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"||window.location.href == "http://asa-world.cn/categories/"){

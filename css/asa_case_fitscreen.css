@@ -85,6 +85,7 @@
 	margin: 0.2em 0.2em;
   }
   
+  /*留言板页样式*/
   #envelope{
 	  background: var(--asa-card-bg);
   }
@@ -93,6 +94,32 @@
 	  color: var(--asa-white)!important;
   }
   
+  .author-content-item.like-music{
+	  min-width: 0;
+  }
+  
+  /*关于页样式*/
+  #about-page > div:nth-child(8) > div.author-content-item-group.column.mapAndInfo > div.author-content-item.map.single{
+	  margin-top: 0px;
+	  padding-top: 0;
+	  padding-bottom: 0;
+	  min-height: 180px;
+  }
+  
+  #about-page > div:nth-child(8) > div.author-content-item-group.column.mapAndInfo > div.author-content-item.selfInfo.single {
+    margin-top: 20px;
+  }
+  
+  .author-content-item.personalities {
+    min-height: 240px;
+  }
+  #about-page > div:nth-child(5) > div.author-content-item.personalities > div.post-tips {
+    top: 61px!important;
+	color: var(--asa-fontcolor)!important;
+  }
+    #about-page > div:nth-child(5) > div.author-content-item.personalities > div.post-tips a{
+	color: var(--asa-main)!important;
+  }
   
   /*heo-case*/
   /*-------------------------------------------------------------------------*/
@@ -977,12 +1004,8 @@
     padding: 1rem;
   }
 
-  .author-content-item.personalities {
-    min-height: 360px;
-  }
-
   .author-content-item.personalities .image {
-    right: -70px;
+    right: -99px;
   }
 
   .author-content-item.map {
