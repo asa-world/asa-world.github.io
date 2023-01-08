@@ -500,7 +500,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	  fetch('https://v1.hitokoto.cn/?c=j&c=k&c=e')
         .then(response => response.json())
         .then(data => {
-		  Snackbar.show({ text: data.hitokoto +" —— " + data.from , backgroundColor: '#1f1f1f', pos: 'bottom-center',duration: '6000',showAction: false });
+		  btf.snackbarShow(data.hitokoto +" —— " + data.from);
           })	
 	},
     hideAsideBtn: () => { // Hide aside

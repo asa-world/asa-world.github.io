@@ -154,7 +154,16 @@
   #post-meta > h1{
 	  min-height: 2.8rem;
   }
-  /*heo-case*/
+  
+  .post #content-inner{
+	  margin: 0!important;
+	  padding: 0!important;
+  }
+  #post{
+      padding: 50px 30px!important;
+  }
+  
+  /*asa-case*/
   /*-------------------------------------------------------------------------*/
 
   :root {
@@ -382,7 +391,7 @@
 
 
   #footer {
-    background: linear-gradient(180deg, var(--asa-background) 0%, var(--asa-card-bg) 25%);
+    background: linear-gradient(180deg, var(--asa-background) 0%, var(--asa-card-bg) 25%)!important;
     margin-top: 0;
     z-index: 999;
   }
@@ -1161,7 +1170,7 @@ a.categoryButton:after {
   width: 1rem;
   left: 21px;
   height: 2px;
-  background: var(--heo-white);
+  background: var(--asa-white);
   content: "";
   border-radius: 1px;
   position: absolute;
@@ -1223,13 +1232,13 @@ div#banners {
     display: flex;
     width: 100%;
     height: 76%;
-    background: var(--heo-card-bg);
+    background: var(--asa-card-bg);
     margin-bottom: 0.5rem;
     border: var(--style-border);
     border-radius: 12px;
     overflow: hidden;
     position: relative;
-    box-shadow: var(--heo-shadow-border);
+    box-shadow: var(--asa-shadow-border);
     flex-direction: column;
     overflow: hidden;
     transition: 0.3s;
@@ -1237,7 +1246,7 @@ div#banners {
   }
 
   div#banners:hover {
-    box-shadow: var(--heo-shadow-main);
+    box-shadow: var(--asa-shadow-main);
   }
 
   #banners.flink {
@@ -1253,28 +1262,28 @@ div#banners {
 
   #banners .banner-button {
     padding: 8px 12px;
-    background: var(--heo-fontcolor);
+    background: var(--asa-fontcolor);
     border-radius: 12px;
-    color: var(--heo-card-bg);
+    color: var(--asa-card-bg);
     display: flex;
     align-items: center;
     z-index: 1;
     transition: 0.3s;
     cursor: pointer;
-    box-shadow: var(--heo-shadow-black);
+    box-shadow: var(--asa-shadow-black);
   }
 
   #banners .banner-button.secondary {
-    background: var(--heo-secondbg);
+    background: var(--asa-secondbg);
     border: var(--style-border-always);
-    color: var(--heo-lighttext);
+    color: var(--asa-lighttext);
     margin-right: 1rem;
-    box-shadow: var(--heo-shadow-border);
+    box-shadow: var(--asa-shadow-border);
   }
 
   #banners .banner-button:hover {
-    background: var(--heo-theme);
-    color: var(--heo-white);
+    background: var(--asa-theme);
+    color: var(--asa-white);
   }
 
   #banners .banner-button i {
@@ -1305,7 +1314,7 @@ div#banners {
   .banners-title-small {
     font-size: 12px;
     line-height: 1;
-    color: var(--heo-secondtext);
+    color: var(--asa-secondtext);
     margin-top: 8px;
     margin-bottom: 0.5rem;
   }
@@ -1316,8 +1325,8 @@ div#banners {
     height: 100%;
     top: 0;
     left: 0;
-    background: var(--heo-theme);
-    color: var(--heo-white);
+    background: var(--asa-theme);
+    color: var(--asa-white);
     padding-left: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -1386,7 +1395,7 @@ div#banners {
     bottom: 2rem;
     left: 2rem;
     z-index: 2;
-    color: var(--heo-white);
+    color: var(--asa-white);
     max-width: 60%;
     transition: 0.3s;
   }
@@ -1420,9 +1429,9 @@ div#banners {
   }
 
   .topGroup .banner-button {
-    background: var(--heo-white-op);
+    background: var(--asa-white-op);
     border-radius: 20px;
-    color: var(--heo-white);
+    color: var(--asa-white);
     display: flex;
     align-items: center;
     z-index: 1;
@@ -1436,8 +1445,8 @@ div#banners {
   }
 
   .topGroup .banner-button:hover {
-    background: var(--heo-theme);
-    color: var(--heo-white);
+    background: var(--asa-theme);
+    color: var(--asa-white);
   }
 
   .topGroup .banner-button i {
@@ -1489,7 +1498,7 @@ div#banners {
 
   #category-bar:hover {
     border: var(--style-border-hover);
-    box-shadow: var(--heo-shadow-main);
+    box-shadow: var(--asa-shadow-main);
   }
 
   .category-in-bar-tips {
@@ -1503,7 +1512,7 @@ div#banners {
 
   #recent-posts>.recent-post-item:nth-child(2) .lastestpost {
     display: flex;
-    color: var(--heo-lighttext);
+    color: var(--asa-lighttext);
     font-size: 0.5rem;
     position: relative;
   }
@@ -1575,7 +1584,7 @@ div#banners {
 
   .recent-post-top .recent-post-item:hover {
     border: var(--style-border-hover);
-    box-shadow: var(--heo-shadow-main);
+    box-shadow: var(--asa-shadow-main);
     transform: scale(1.03);
   }
 
@@ -1592,7 +1601,7 @@ div#banners {
     width: calc(100% / 2 - 0.5rem);
     margin-top: 0.25rem;
     margin-bottom: 0.75rem;
-    box-shadow: var(--heo-shadow-border);
+    box-shadow: var(--asa-shadow-border);
     clip-path: inset(0 0 0 0 round 12px);
   }
 
@@ -1602,7 +1611,7 @@ div#banners {
 
   #category-bar {
     margin-bottom: 0.75rem;
-    box-shadow: var(--heo-shadow-border);
+    box-shadow: var(--asa-shadow-border);
   }
 
   /* 首页文章第一个 */
@@ -1631,11 +1640,11 @@ div#banners {
   }
 
   #aside-content .card-info .card-info-social-icons i {
-    color: var(--heo-white);
+    color: var(--asa-white);
   }
 
   [data-theme=dark] #aside-content .card-info .card-info-social-icons i {
-    color: var(--heo-white);
+    color: var(--asa-white);
   }
 
   #aside-content .card-widget {
@@ -1688,7 +1697,7 @@ div#banners {
     justify-content: center;
   }
   #post .tag_share .post-meta__tags {
-    background: var(--heo-card-bg);
+    background: var(--asa-card-bg);
     border: var(--style-border);
   }
 
@@ -1757,7 +1766,7 @@ div#banners {
   .prev-post.pull-left,
   #pagination .prev-post,
   #pagination .next-post {
-    background: var(--heo-maskbgdeep);
+    background: var(--asa-maskbgdeep);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
   }
@@ -1777,7 +1786,7 @@ div#banners {
 
   #post #pagination .prev-post .label,
   #pagination .next-post .label {
-    color: var(--heo-fontcolor);
+    color: var(--asa-fontcolor);
     font-weight: bold;
     font-size: 12px;
     margin-bottom: 0.5rem;
@@ -1814,7 +1823,7 @@ div#banners {
   }
 
   .share-button {
-    background: var(--heo-card-bg);
+    background: var(--asa-card-bg);
     border: var(--style-border);
   }
 

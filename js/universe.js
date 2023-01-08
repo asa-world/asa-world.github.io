@@ -14,7 +14,6 @@ $(".topGroup").hover((function() {}
 /*文章页顶部图主题色设置*/
 var type = document.querySelector("meta[property='og:type']").content;
 if(type == 'article'){
-	console.log(type);
 	var color = document.getElementsByTagName('meta')['img-color'].content;
 	document.documentElement.style.setProperty('--asa-main',color);
 }
@@ -26,8 +25,10 @@ var foreignTips = (function () {
       return;
     }
     var code = geoipResponse.country.iso_code.toLowerCase();
+	console.log(code);
     if (code != 'cn'){
-      btf.snackbarShow('使用国外网络访问将无法访问文章图片，敬请谅解。If you use foreign network access, you will not be able to access articles and pictures.')
+      Snackbar.show({text: '使用国外网络访问将无法访问本站图片，敬请谅解。Sorry, the images will be unaccessible with foreign network.',pos: 'top-center',showAction: false,duration: '5000' })
+	  //btf.snackbarShow('使用国外网络访问将无法访问文章图片，敬请谅解。If you use foreign network access, you will not be able to access articles and pictures.')
     }
   };
   var onError = function (error) {
@@ -36,13 +37,44 @@ var foreignTips = (function () {
     geoip2.country(onSuccess, onError);
   };
 }());
-foreignTips();*/
+foreignTips();
+*/
 
+/*加载背景
+const preloader = {
+    endLoading: () => {
+      document.body.style.overflow = 'auto';
+      document.getElementById('loading-box').classList.add("loaded")
+    },
+    initLoading: () => {
+      document.body.style.overflow = '';
+      document.getElementById('loading-box').classList.remove("loaded")
+    }
+}
+window.addEventListener('load',()=> { preloader.endLoading() });
 
+if (1) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}*/
 
-
-
-
+/*打字效果*/
+var typed = new Typed("#footer-banner", {
+  strings: ["兴趣是最好的老师","Take action to think, to change, to create."],
+  startDelay: 200,
+  backDelay: 2000,
+  typeSpeed: 70,
+  loop: true,
+  backSpeed: 20
+  })
+var typed = new Typed("#footer-banner-tips", {
+  strings: ["兴趣是最好的老师","Take action to think, to change, to create."],
+  startDelay: 200,
+  backDelay: 2000,
+  typeSpeed: 70,
+  loop: true,
+  backSpeed: 20
+  })
 /*
 function mouseScrollDirection ( fn ) {
     var beforeScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
@@ -108,7 +140,7 @@ alert("横屏状态！")
    hengshuping();*/
   }
 
-/*分类页的bgm*/
+/*分类页*/
 if(window.location.href == "http://localhost:4000/categories/"||window.location.href == "https://asa-world.github.io/categories/"||window.location.href == "https://asa-world.cn/categories/"||window.location.href == "http://asa-world.cn/categories/"){
   document.querySelector('#aside-content > div.sticky_layout').style.display = 'none';
   document.querySelector('#page > div.category-lists > ul').style.display = 'none';
@@ -127,6 +159,20 @@ if(window.location.href == "http://localhost:4000/categories/"||window.location.
   }
 
  }
+  /**/
+  var category_lists = document.querySelectorAll("#blog_name > div > div > div> span > div > ul > li");
+  var i;
+  var create_li = document.querySelector("#blog_name > div > div > div> span > div.is-center.tag-cloud-list")
+  for(i=0 ; i<category_lists.length ; i++){
+	 let a0 = document.createElement('a');
+	 a0.innerHTML = '<span class="tags-punctuation">#</span><p style="display: inline-block; margin: auto;">haha</p><span class="tagsPageCount">num</span>';
+     a0.href = category_lists[i].childNodes[0].href;
+	 a0.childNodes[1].innerHTML = category_lists[i].childNodes[0].innerHTML;
+	 a0.childNodes[2].innerHTML = category_lists[i].childNodes[1].innerHTML;	 
+	 create_li.insertAdjacentElement('beforeend',a0);  
+  }
+
+
 
 if(window.location.href == "http://localhost:4000/archives/"||window.location.href == "https://asa-world.github.io/archives/"||window.location.href == "https://asa-world.cn/archives/"||window.location.href == "http://asa-world.cn/archives/"){
   document.querySelector("#site-title").style.display = 'none';
