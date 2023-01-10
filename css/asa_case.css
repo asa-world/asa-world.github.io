@@ -314,6 +314,12 @@
 	padding: 20px 0!important;
   }
 
+/*翻页键*/
+#pagination{
+	margin: auto;
+}
+
+
 #blog_name{
 	padding-left: 41px;
 }
@@ -1950,6 +1956,25 @@ a.categoryButton:hover {
   width: 100%;
 }
 
+#aside-content > div.card-widget.card-proinfo i{
+	padding: 0.4em;
+}
+#card-github{
+	text-align: center;
+	background-color: var(--asa-secondbg);
+	border-radius: 15px;
+	margin: 10px;
+}
+
+#card-github:hover{
+	background: var(--asa-main);
+    transition: 0.3s;
+    box-shadow: var(--asa-shadow-main);
+    transform: scale(1.1);
+}
+#card-github i,#card-github span{
+	color: var(--asa-fontcolor)!important;
+}
 /* 文章卡片图标与文字间隙 */
 #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap i {
   margin: 0 0.4rem 0 0;

@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>利用概率密度函数奇偶性速求分布函数</title>
+      <title>单词忍者——简约优雅的背单词软件开发报告</title>
+      <link href="/529b1168/"/>
+      <url>/529b1168/</url>
+      
+        <content type="html"><![CDATA[<h1>需求分析</h1><p>英语作为一门全球通用的语言，深受人们的重视，现在有很多地方从幼儿园就开始学习英语。对于很多人来说，学习英语是一个非常困难的事情，而背单词APP的开发可以让用户利用碎片化的时间随时随地学习英语单词，打破了传统学习对时间和场地的限制，可以更好的提高大家的学习效率。</p><p>同时个人喜简约流，所以打算开发一个简约但功能强大的背单词软件。</p><h1>功能分析</h1><p>刚拿到这个项目时我还是比较迷茫的，因为这是我第一次开发项目，而且还是独自一人，只能咬着牙关艰难前行。于是我首先分析了市场上主流的背单词软件的优缺点。</p><h2 id="百词斩">百词斩</h2><p>百词斩是我高中就被老师推荐使用了。这款软件在注册时会根据用户的自身情况来推荐词库，非常个性化。同时，他还有一个很有意思的功能。在背单词时会推出单词的一个例句，然后给用户四个图片，让用户选择符合单词汉意的图片，也就是所谓的图形记忆法。这个功能很有创新。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230110231528063.png" alt="百词斩优点"></p><p>但是，他也有缺点。首先广告非常讨厌，影响用户心情。他的图形记忆法同时也是缺点。他提供的图片单一，很难包括单词的所有含义，有一定的局限性。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230110231615899.png" alt="百词斩缺点"></p><h2 id="扇贝单词">扇贝单词</h2><p>扇贝单词的界面很清新，尤其是启动界面会展现一张美图和一句优美的英语句子，很有感觉。同时，他的学习数据非常明确，“新单词数”、“复习单词数”、“未学单词数”都清晰提示着用户。</p><p>令人遗憾的是，他的部分功能需要会员，往往会使像我这种不想氪金的用户望而却步。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230110231653403.png" alt="扇贝单词分析"></p><p>通过这一系列的分析，我对于软件功能有了大致了解。我总结出单词背诵有几种模式：</p><ul><li><p>背诵模式1：通过发音回想单词——听力时的需求</p></li><li><p>背诵模式2：只提供单词（记单词卡模式），通过单词回忆单词汉意——做阅读题时的需求</p></li><li><p>背诵模式3：只提供汉意，通过汉意回想单词——写作文时的需求</p></li><li><p>背诵模式4：单词部分字母缺失，补全单词——词汇量进阶</p></li><li><p>背诵模式5：通过图片记忆单词——增加趣味性</p></li></ul><p>除了背诵功能外，还应有多用户登录系统来满足不同用户的使用。</p><h1>系统设计</h1><p>我把这款软件取名为“单词忍者”。这个名字启发于“水果忍者”，我希望用户在使用我这款软件时，想玩水果忍者一样快刀斩乱麻，在苦涩的英语学习过程中也有些许快乐与轻松。</p><p>具体系统操作过程如下所示。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230110231730425.png" alt="image-20230110231730425"></p><h1>功能实现</h1><ul><li><p>界面显示是使用的EasyX的图形库头文件，界面图片需要用PS制作图片（共26张）。</p></li><li><p>接受用户的输入信息使用了InputBox和MessageBox函数。</p></li><li><p>用户信息的储存和词库的储存使用了ini文件，该文件可以通过“键-节”来便捷的访问“值”。</p></li><li><p>同时增加了两个结构体用来储存用户信息以及单词信息。</p></li><li><p>编码方式为Unicode，它是宽字符的一种，是EsayX所必须的，它有很好的可移植性，便于不同地区的学习。但它也有个缺点就是一般编码方式的函数不能正常使用，需要转换，不利于新手小白使用。</p></li></ul><h1>软件截图</h1><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/welcome.png" alt="welcome"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/first_interface.png" alt="first_interface"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/recitemenu.png" alt="recitemenu"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230110232700753.png" alt="image-20230110232700753"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/exit.png" alt="exit"></p><h1>特色亮点</h1><p>这个项目在开发出来以后，我还是比较满意的，它有以下亮点：</p><ol><li>添加bgm，增强沉浸感</li><li>鼠标交互，方便快捷</li><li>美女真人发音，宅男福利</li><li>功能强大，三大背诵功能任你选</li><li>界面精美</li><li>纯净无广告</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 产品设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 我电作业 </tag>
+            
+            <tag> 产品设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>我宣布个事，利用概率密度函数奇偶性速求分布函数</title>
       <link href="/b599e018/"/>
       <url>/b599e018/</url>
       
@@ -31,7 +58,7 @@
     
     
     <entry>
-      <title>mysql鉴权方式转换方法</title>
+      <title>mysql鉴权方式转换方法，auth_sockt方式与用户模式</title>
       <link href="/30d59510/"/>
       <url>/30d59510/</url>
       
@@ -147,7 +174,7 @@
     
     
     <entry>
-      <title>智航——智慧助行产品设计开发报告</title>
+      <title>智航——解决老年人出行难问题的智慧助行产品设计开发报告</title>
       <link href="/87ce7af/"/>
       <url>/87ce7af/</url>
       
@@ -176,7 +203,7 @@
     
     
     <entry>
-      <title>vercel部署twikoo的访问问题</title>
+      <title>vercel部署twikoo的访问问题，vercel的默认域名时不时被墙</title>
       <link href="/5f3bb65c/"/>
       <url>/5f3bb65c/</url>
       
@@ -205,7 +232,7 @@
     
     
     <entry>
-      <title>【搞笑】博客中js音乐播放问题</title>
+      <title>【搞笑】博客中js音乐播放问题，直链你最好有事</title>
       <link href="/fe476b11/"/>
       <url>/fe476b11/</url>
       
@@ -232,7 +259,7 @@
     
     
     <entry>
-      <title>Ford-Fulkerson算法实践</title>
+      <title>使用SDN网络架构的Ford-Fulkerson算法实践</title>
       <link href="/5c5a2704/"/>
       <url>/5c5a2704/</url>
       
@@ -290,7 +317,7 @@
     
     
     <entry>
-      <title>困扰我很久的微软商店无法使用的问题解决</title>
+      <title>困扰久已的微软商店无法使用的问题解决</title>
       <link href="/74810b/"/>
       <url>/74810b/</url>
       
@@ -379,7 +406,7 @@
     
     
     <entry>
-      <title>dijkstra算法实践</title>
+      <title>使用SDN网络架构的dijkstra算法实践</title>
       <link href="/39935ec6/"/>
       <url>/39935ec6/</url>
       
@@ -410,7 +437,7 @@
     
     
     <entry>
-      <title>DFS算法实践</title>
+      <title>使用SDN网络架构的DFS算法实践项目</title>
       <link href="/e9c4a133/"/>
       <url>/e9c4a133/</url>
       
@@ -441,7 +468,7 @@
     
     
     <entry>
-      <title>Kruskal算法实践</title>
+      <title>使用SDN网络架构的Kruskal算法实践</title>
       <link href="/fd05d161/"/>
       <url>/fd05d161/</url>
       
@@ -862,7 +889,7 @@
     
     
     <entry>
-      <title>编程语言，脚本语言or标记语言，傻傻分不清楚</title>
+      <title>编程语言，脚本语言or标记语言？？？</title>
       <link href="/38fd64a1/"/>
       <url>/38fd64a1/</url>
       
