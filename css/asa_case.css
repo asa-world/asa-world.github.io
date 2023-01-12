@@ -314,6 +314,104 @@
 	padding: 20px 0!important;
   }
 
+/* 工具推荐 */
+.author-content.author-content-item.toolPage {
+  height: 22rem;
+  background: url(https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230112223530086.png) no-repeat top;
+  background-size: cover;
+  color: var(--asa-white);
+  overflow: hidden;
+  margin-top: 0;
+}
+.tool-list{
+	display: flex;
+}
+.tool-list-item {
+    margin: 6px 6px;
+    transition: 0.3s;
+    border-radius: 12px;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    width: calc(20% - 12px);
+    border: var(--style-border);
+    box-shadow: var(--asa-shadow-border);
+    background: var(--asa-card-bg);
+    display: flex;
+}
+.tool-list-item a {
+    display: flex;
+    border: none;
+    width: 100%;
+    height: 100%;
+	    color: var(--asa-fontcolor);
+    text-decoration: none;
+	font-weight: bold;
+    padding: 0 4px;
+    border-radius: 4px 4px 0 0;
+}
+.tool-list-item:hover a{
+	text-decoration: none!important;
+}
+.tool-list-item:hover{
+	    background: var(--asa-main);
+		transform: scale(1.1);
+}
+.tool-list-item a img {
+    border-radius: 32px;
+    margin: 15px 20px 15px 15px!important;
+    transition: 0.3s;
+    background: var(--asa-white);
+    min-width: 60px;
+    min-height: 60px;
+	    width: 60px;
+    height: 60px;
+}
+
+.tool-list-item .tool-item-info {
+    max-width: 136px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	margin: auto;
+}
+
+.tool-item-name{
+    -webkit-tap-highlight-color: transparent;
+    line-height: 17px;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    transition: 0.3s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    padding: 0px 10px 0px 0px;
+    font-weight: 700;
+    text-align: left;
+    font-size: 19px;
+    color: var(--asa-fontcolor);
+}
+.tool-item-desc{
+    -webkit-tap-highlight-color: transparent;
+    line-height: 17px;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: 0.3s;
+    font-size: 0.93em;
+    white-space: normal;
+    padding: 5px 10px 16px 0;
+    color: var(--asa-fontcolor);
+    text-align: left;
+    height: 40px;
+    text-overflow: ellipsis;
+    opacity: 0.7;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
 /*翻页键*/
 #pagination{
 	margin: auto;
