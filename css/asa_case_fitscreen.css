@@ -5,6 +5,10 @@
   /*-------------------------------------------------------------------------*/
   
   
+  .tool-list-item {
+    width: calc(50% - 12px) !important;
+  }
+  
   /*导航栏
   -----------------------------------------------------------------------------------*/
   #nav > div.mask-name-container{
@@ -1903,6 +1907,10 @@ flex-direction:row!important;
 	#footer-wrap > span{
 		visibility:hidden
 	}
+	
+	.tool-list-item {
+    width: calc(33.3333% - 12px)!important;
+    }
 }
 
 @media screen and (max-width: 1420px){
@@ -1913,4 +1921,10 @@ flex-direction:row!important;
     .layout {
     margin: 0 41px;
 	}
+}
+
+@media screen and (max-width: 1200px){
+	.tool-list-item {
+    width: calc(25% - 12px)!important;
+   }
 }
