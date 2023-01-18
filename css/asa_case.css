@@ -313,7 +313,35 @@
 	width: auto;
 	padding: 20px 0!important;
   }
-
+  
+/*本地搜索*/
+#local-search .search-dialog .local-search-box input {
+    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+    background: var(--asa-card-bg);
+    border-color: var(--asa-main);
+}
+.search-dialog{
+	background: var(--asa-card-bg);
+	    border-style: solid;
+    border-width: thin;
+    border-radius: 10px;
+	border-color: var(--asa-secondbg);
+}
+.search-dialog:hover{
+	border-color: var(--asa-main);
+	transition: .8s;
+}
+#search-mask {
+    background: rgba(0,0,0,0.9);
+}
+#local-search-results > div > div> p{
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
 
 /*翻页键*/
 #pagination{
@@ -783,10 +811,10 @@
 .copyright{
 	float: left;
 }
-#fotid{
+#foot_r{
 	float: right;
 }
-#fotid {	
+#foot_r {	
 	line-height: 40%;
 }
 
@@ -3131,7 +3159,6 @@ a.categoryButton:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-	margin: auto;
 }
 
 .tool-item-name{
@@ -3374,6 +3401,29 @@ figure.gallery-group:hover .gallery-group-name::after {
   #post > div.top-img.gist{
 	  display: none;
   }
+
+/*相关推荐*/
+.relatedPosts {
+    margin-top: 0;
+}
+.relatedPosts>.relatedPosts-list>div{
+	border-radius: 15px;
+}
+.relatedPosts>.relatedPosts-list>div:hover{
+	background: var(--asa-main);
+}
+.relatedPosts > .relatedPosts-list > div:hover img {
+    opacity: 0;
+}
+#post > div.relatedPosts > div.relatedPosts-list > div> a > div > div{
+	font-weight: bold;
+	font-size: 1.1rem;
+	-webkit-line-clamp: 3;
+	
+}
+#post > div.relatedPosts > div.relatedPosts-list > div> a > div > div.date{
+	display: none;
+}
 
 /* 文章头图 */
 #page-header.post-bg:before {

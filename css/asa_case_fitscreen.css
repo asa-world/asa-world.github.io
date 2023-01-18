@@ -6,7 +6,7 @@
   
   
   .tool-list-item {
-    width: calc(50% - 12px) !important;
+    width: calc(50% - 12px);
   }
   
   /*导航栏
@@ -48,7 +48,7 @@
 }
   /*页脚样式 
   -----------------------------------------------------------------------------------*/
-  #fotid,.copyright{
+  #foot_r,.copyright{
 	  display: block!important;
 	  float: none;
 	  font-weight: normal;
@@ -1907,10 +1907,6 @@ flex-direction:row!important;
 	#footer-wrap > span{
 		visibility:hidden
 	}
-	
-	.tool-list-item {
-    width: calc(33.3333% - 12px)!important;
-    }
 }
 
 @media screen and (max-width: 1420px){
@@ -1923,8 +1919,19 @@ flex-direction:row!important;
 	}
 }
 
-@media screen and (max-width: 1200px){
+/*工具箱页适配*/
+@media screen and (min-width: 1001px) and (max-width: 1200px){
 	.tool-list-item {
-    width: calc(25% - 12px)!important;
+    width: calc(25% - 12px);
    }
+}
+@media screen and (min-width: 769px) and (max-width: 1000px){
+	.tool-list-item {
+    width: calc(33.3333% - 12px);
+    }
+}
+@media screen and (max-width: 600px){
+	.tool-list-item {
+    width: calc(100% - 12px)!important;
+    }
 }
