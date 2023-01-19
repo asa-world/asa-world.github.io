@@ -11,7 +11,7 @@
   
   /*导航栏
   -----------------------------------------------------------------------------------*/
-  #nav > div.mask-name-container{
+  #nav > div.mask-name-container,#darkmode_navswitch{
 	  display: none;
   }
   #page-header{
@@ -841,7 +841,7 @@
     background: var(--asa-card-bg);
     border: var(--style-border-always);
     box-shadow: var(--asa-shadow-border);
-	color: var(--asa-white);
+	color: var(--asa-fontcolor);
   }
   
   #pagination > div > a.extend.prev{
@@ -890,16 +890,6 @@
     width: 300px;
   }
 
-  .tk-comments-container>.tk-comment {
-    padding: 1rem;
-    border: var(--style-border-always);
-    box-shadow: var(--asa-shadow-border);
-  }
-
-  .tk-icon.__comments {
-    left: 0.5rem;
-  }
-
 
   .post-reward .reward-main {
     justify-content: center !important;
@@ -945,11 +935,6 @@
     margin-left: 0px !important;
     width: 100% !important;
     margin-bottom: 8px;
-  }
-
-  .tk-icon {
-    position: absolute;
-    right: 0;
   }
 
   .post-tools-left>div {

@@ -13,16 +13,18 @@
       
       <categories>
           
-          <category> 产品设计 </category>
+          <category> 项目报告 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 我电作业 </tag>
+            <tag> 项目开发 </tag>
             
             <tag> 产品设计 </tag>
+            
+            <tag> C语言 </tag>
             
         </tags>
       
@@ -40,16 +42,16 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 广开门路 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
             <tag> 教程 </tag>
+            
+            <tag> 数学 </tag>
             
         </tags>
       
@@ -67,7 +69,7 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 广开门路 </category>
           
       </categories>
       
@@ -109,6 +111,8 @@
             
             <tag> 机器视觉 </tag>
             
+            <tag> Python </tag>
+            
         </tags>
       
     </entry>
@@ -137,6 +141,8 @@
             <tag> 产品设计 </tag>
             
             <tag> 机器视觉 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -167,6 +173,8 @@
             
             <tag> 机器视觉 </tag>
             
+            <tag> Python </tag>
+            
         </tags>
       
     </entry>
@@ -183,16 +191,14 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 项目报告 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
-            <tag> 顶点计划 </tag>
+            <tag> 项目开发 </tag>
             
             <tag> 产品设计 </tag>
             
@@ -223,7 +229,7 @@
             
             <tag> 教程 </tag>
             
-            <tag> 科学上网 </tag>
+            <tag> bug </tag>
             
         </tags>
       
@@ -275,13 +281,11 @@
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
-            <tag> mininet </tag>
-            
-            <tag> ryu控制器 </tag>
+            <tag> SDN </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> 项目开发 </tag>
             
         </tags>
       
@@ -333,8 +337,6 @@
       
         <tags>
             
-            <tag> 科学上网 </tag>
-            
             <tag> bug </tag>
             
         </tags>
@@ -360,13 +362,13 @@
       
         <tags>
             
+            <tag> 产品设计 </tag>
+            
             <tag> 机器视觉 </tag>
             
             <tag> 人工智能 </tag>
             
-            <tag> 板端开发 </tag>
-            
-            <tag> linux </tag>
+            <tag> Unbutu </tag>
             
         </tags>
       
@@ -391,13 +393,13 @@
       
         <tags>
             
+            <tag> Ubuntu </tag>
+            
+            <tag> 产品设计 </tag>
+            
             <tag> 机器视觉 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> 板端开发 </tag>
-            
-            <tag> linux </tag>
             
         </tags>
       
@@ -422,13 +424,11 @@
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
-            <tag> mininet </tag>
-            
-            <tag> ryu控制器 </tag>
+            <tag> SDN </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> 项目开发 </tag>
             
         </tags>
       
@@ -453,13 +453,11 @@
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
-            <tag> mininet </tag>
-            
-            <tag> ryu控制器 </tag>
+            <tag> SDN </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> 项目开发 </tag>
             
         </tags>
       
@@ -484,13 +482,11 @@
       
         <tags>
             
-            <tag> 我电作业 </tag>
-            
-            <tag> mininet </tag>
-            
-            <tag> ryu控制器 </tag>
+            <tag> SDN </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> 项目开发 </tag>
             
         </tags>
       
@@ -515,7 +511,9 @@
       
         <tags>
             
-            <tag> mininet </tag>
+            <tag> SDN </tag>
+            
+            <tag> Ubuntu </tag>
             
             <tag> 教程 </tag>
             
@@ -542,11 +540,11 @@
       
         <tags>
             
-            <tag> mininet </tag>
-            
-            <tag> ryu控制器 </tag>
+            <tag> SDN </tag>
             
             <tag> Ubuntu </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -564,12 +562,14 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 项目报告 </category>
           
       </categories>
       
       
         <tags>
+            
+            <tag> 研究报告 </tag>
             
             <tag> 计算机通信网 </tag>
             
@@ -761,14 +761,14 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 广开门路 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 诗歌 </tag>
+            <tag> 研究报告 </tag>
             
         </tags>
       
@@ -786,14 +786,14 @@
       
       <categories>
           
-          <category> 我电作业 </category>
+          <category> 项目报告 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 顶点计划 </tag>
+            <tag> 研究报告 </tag>
             
         </tags>
       
@@ -905,9 +905,7 @@
       
         <tags>
             
-            <tag> 名词辨析 </tag>
-            
-            <tag> 编程语言 </tag>
+            <tag> 研究报告 </tag>
             
         </tags>
       
@@ -932,9 +930,7 @@
       
         <tags>
             
-            <tag> markdown </tag>
-            
-            <tag> 历史 </tag>
+            <tag> 研究报告 </tag>
             
         </tags>
       

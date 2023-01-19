@@ -303,6 +303,13 @@
 
 /* 全局样式 
 ---------------------------------------------------------------------------------------------------- */
+
+#rightside{
+	display: none;
+}
+
+
+
 #recent-posts>.recent-post-item>.recent-post-info>.article-title {
     -webkit-line-clamp: 2!important;
 }
@@ -313,7 +320,9 @@
 	width: auto;
 	padding: 20px 0!important;
   }
-  
+body{
+	background: var(--asa-background);
+}
 /*本地搜索*/
 #local-search .search-dialog .local-search-box input {
     border-style: solid;
@@ -414,7 +423,7 @@
 }
 
 #sidebar-menus > div.card-allinfo.card-archives.card-tags.card-webinfo.card-widget > div a{
-	color: var(--asa-white)!important;
+	color: var(--asa-fontcolor)!important;
 	font-weight: bold;
 	border-radius: 12px;
     -webkit-backface-visibility: hidden;
@@ -435,11 +444,24 @@
 	background: var(--asa-secondbg);
 	margin: 0.2em 0.2em;
 }
-
-[data-theme=dark] a.darkmode_switchbutton {
-    background: var(--asa-orange) !important;
-    color: var(--asa-white) !important;
+#recent-post-top > div.topGroup > div> div.recent-post-info > a{
+	color: var(--asa-fontcolor);
 }
+[data-theme=dark] a.darkmode_switchbutton {
+	background: transparent!important;
+}
+a.darkmode_switchbutton:hover{
+	background: var(--asa-main)!important;
+}
+
+#sidebar-menus > div.sidebar-menu-item > a{
+	background-color: var(--asa-orange)!important;
+	color: var(--asa-white);
+}
+[data-theme=dark] #sidebar-menus > div.sidebar-menu-item > a{
+	background-color: var(--asa-card-bg)!important;
+}
+
 
 #sidebar-menus > div.menus_items > div> ul{
 	background-color: transparent!important;
@@ -470,7 +492,6 @@
   background: var(--asa-background);
   transition: all 0.5s ease 0s;
   padding-top: 30px;
-  padding-bottom: 9em;
   z-index: 1001;
 }
 
@@ -479,7 +500,6 @@
 	    min-height: 32px;
     text-align: center;
     background-color: var(--asa-secondbg);
-	border-radius: 8px;
 	margin-top: 20px;
 }
 
@@ -502,9 +522,7 @@
 }
 
 #sidebar #sidebar-menus .back-menu-list-groups .back-menu-list .back-menu-item {
-  background: var(--asa-card-bg);
-  border: var(--style-border-always);
-  border-radius: 8px;
+  margin-top: 7px;
 }
 
 #sidebar #sidebar-menus .back-home-button {
@@ -774,11 +792,12 @@
   background: var(--asa-maskbg);
 }
 
-
-
+#page,#page:hover{
+    box-shadow: none;
+}
 /*夜间模式伪类遮罩层透明*/
 [data-theme="dark"]
-  #footer::before,#page-header::before{
+  #footer::before{
      background-color: var(--asa-black-op)!important;
 }
 
@@ -807,7 +826,9 @@
 	display: inline-block;
 
 }
-
+#footer:before{
+	display: none;
+}
 .copyright{
 	float: left;
 }
@@ -914,8 +935,14 @@ span.bubble-content {
 	font-size: 1em;
 }
 
+#darkmode_navswitch > a > i{
+	font-size: 1.1em;
 
-
+}
+#darkmode_navswitch > a{
+		background: var(--asa-orange);
+    color: var(--asa-white) !important;
+}
 #nav-totop:hover .totopbtn i {
   opacity: 1;
 }
@@ -1097,11 +1124,11 @@ ul.menus_item_child:hover {
 }
 #site-name:after{
 	content: "Asa-World";
-	color: var(--asa-white) !important;
+	color: var(--asa-fontcolor) !important;
 }
 #site-name:hover:after{
 	content: "->HOME<-";
-	color: var(--asa-white) !important;
+	color: var(--asa-fontcolor) !important;
 }
 
 #menus > div.menus_items > div > a {
@@ -1134,7 +1161,7 @@ ul.menus_item_child:hover {
   width: 100%;
   height: 100%;
   border-radius: 25px;
-  color: var(--asa-white) !important;
+  color: var(--asa-fontcolor) !important;
   top: 0;
   left: 0;
   background-color: var(--asa-theme);
@@ -1163,7 +1190,9 @@ ul.menus_item_child:hover {
 #page-name {
   position: relative;
   padding: 10px 30px;
-    color: var(--asa-white) !important;
+  color: var(--asa-fontcolor) !important;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 center#name-container {

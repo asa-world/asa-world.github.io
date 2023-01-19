@@ -2557,8 +2557,8 @@ h1.page-title + .tag-cloud-list {
 #aside-content .card-tag-cloud a {
   display: inline-block;
   padding: 0 4px;
-  color: #fff !important;
-  font-weight: 300;
+  color: var(--asa-fontcolor) !important;
+  font-weight: 400 !important;
 }
 #aside-content .card-tag-cloud a:hover {
   color: #49b1f5 !important;
@@ -3707,8 +3707,6 @@ h1.page-title + .tag-cloud-list {
 }
 #page-header.not-top-img #nav {
   background: rgba(255,255,255,0.8);
-  -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
-  box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
 }
 #page-header.not-top-img #nav a {
   color: var(--font-color);

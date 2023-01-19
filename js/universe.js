@@ -46,6 +46,25 @@ function dark(){
 	}()
 };
 
+//模式切换
+function switchDarkMode() { // Switch Between Light And Dark Mode
+      const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+      if (nowMode === 'light') {
+        activateDarkMode()
+        saveToLocal.set('theme', 'dark', 2)
+        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night)
+      } else {
+        activateLightMode()
+        saveToLocal.set('theme', 'light', 2)
+        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day)
+      }
+      // handle some cases
+      typeof utterancesTheme === 'function' && utterancesTheme()
+      typeof changeGiscusTheme === 'function' && changeGiscusTheme()
+      typeof FB === 'object' && window.loadFBComment()
+      typeof runMermaid === 'function' && window.runMermaid()
+}
+
 
 function hideTodayCard() {
     document.getElementById("todayCard") && document.getElementById("todayCard").classList.add("hide")
@@ -106,7 +125,7 @@ if (1) {
 
 /*打字效果*/
 var typed = new Typed("#footer-banner", {
-  strings: ["兴趣是最好的老师","Take action to think, to change, to create."],
+  strings: ["兴趣是最好的老师","Take action to think, to create."],
   startDelay: 200,
   backDelay: 2000,
   typeSpeed: 70,
@@ -158,10 +177,12 @@ function getScrollTop() {
 	//document.querySelector('#nav *::after').style.backgroundColor="";
 	document.querySelector('#nav').style.background='transparent';
 	document.querySelector('#nav').style.backdropFilter='';
+	document.querySelector('#nav').style.boxShadow='none';
 	}
 	else{
-		document.querySelector('#nav').style.background='rgba(18,18,18,0.8)';
+		document.querySelector('#nav').style.background='var(--asa-card-bg)';
 		document.querySelector('#nav').style.backdropFilter='saturate(180%) blur(15px)';
+		document.querySelector('#nav').style.boxShadow='0 5px 6px -5px rgb(133 133 133 / 60%)';
 	}
 }
 self.setInterval("getScrollTop()",500);
