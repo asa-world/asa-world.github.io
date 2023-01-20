@@ -46,6 +46,8 @@ function dark(){
 	}()
 };
 
+
+
 //模式切换
 function switchDarkMode() { // Switch Between Light And Dark Mode
       const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
@@ -81,6 +83,8 @@ var type = document.querySelector("meta[property='og:type']").content;
 if(type == 'article'){
 	var color = document.getElementsByTagName('meta')['img-color'].content;
 	document.documentElement.style.setProperty('--asa-main',color);
+	document.querySelector("#post-cover").classList.remove("loading");
+	document.querySelector("#post-cover").classList.add("loaded");
 }
 
 /*判断国外ip

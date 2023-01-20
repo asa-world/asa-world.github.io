@@ -2331,7 +2331,7 @@ a.categoryButton:hover {
   position: absolute;
   border-radius: 50%;
   border: 5px solid var(--asa-background);
-  bottom: 5px;
+  bottom: 0px;
   right: 10px;
   z-index: 2;
 }
