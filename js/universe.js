@@ -47,7 +47,6 @@ function dark(){
 };
 
 
-
 //模式切换
 function switchDarkMode() { // Switch Between Light And Dark Mode
       const nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
@@ -386,5 +385,42 @@ for (i = 0; i < s.length; i++) {
 	s[i].parentNode.insertBefore(para,s[i]);
 }
 
+//随机生成星球
+function randomstar(){
+	var g = document.querySelectorAll(".sagroups");//获取指定元素
+	var s = document.querySelectorAll(".minstar");//获取指定元素
+	var num = document.querySelector(".wordnum");//获取指定元素
+	var i;
+	console.log(num);
+	num.id= s.length + "颗";
+	for (i = 0; i < s.length; i++) {
+		var top = randomNum(-900,520);
+		var left = randomNum(1,80);
+		var size = randomNum(20,100)/100*2.2;
+		while((top>-683 && top<432) && left >50 ){
+			var top = randomNum(-900,520);
+			var left = randomNum(1,80);
+		}
+		g[i].style.top = top + "px";
+		g[i].style.left =  left + "%";
+		s[i].style.width =  size  + "em";
+		s[i].style.height =  size  + "em";
+	}
+	
+}
+randomstar();
 
-
+//随机生成
+function randomNum(minNum,maxNum){ 
+    switch(arguments.length){ 
+        case 1: 
+            return parseInt(Math.random()*minNum+1,10); 
+        break; 
+        case 2: 
+            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10); 
+        break; 
+            default: 
+                return 0; 
+            break; 
+    } 
+} 

@@ -1116,9 +1116,6 @@
     transform: scale(0.97);
   }
 
-  #aside-content .sticky_layout {
-    margin-top: 1rem;
-  }
   #aside-content .aside-list>.aside-list-item:hover {
     transform: scale(1.03);
   }
@@ -1132,11 +1129,11 @@
   }
 
   #aside-content .sticky_layout {
-    top: calc(60px + 0.5rem);
+    top: calc(45px + 0.5rem);
   }
 
   #page-header.nav-visible+.layout>.aside-content>.sticky_layout {
-    top: calc(60px + 0.5rem);
+    top: calc(45px + 0.5rem);
   }
 
   [data-theme=dark] #aside-content>.card-widget.card-info {
