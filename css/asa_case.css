@@ -932,6 +932,11 @@ span.bubble-content {
 
 /* 顶部导航栏
 ---------------------------------------------------------------------------------------------------- */
+#blog_name > div > div > div:nth-child(1) > div.back-menu-list > a > img{
+	object-fit: cover;
+}
+
+
 #search-button > a > i{
 	font-size: 1em;
 }
@@ -4014,7 +4019,8 @@ div#author-info__sayhi {
   border-radius: 32px;
 }
 
-/*傻言页样式
+
+/*星语页样式
 --------------------------------------------------------------------------------------------*/
 #main-star{
 	width:1000px;
@@ -4031,7 +4037,7 @@ div#author-info__sayhi {
 	height:900px;
 	border-style: solid;
 	border-radius:1000px; 
-	border-color: #0e3466;
+	border-color: #6495ED;
 	border-width: 1px;
 	position: absolute;
 	left: 51%;
@@ -4167,7 +4173,6 @@ div#author-info__sayhi {
     text-transform: capitalize;
     animation: var(--animation-1);
 	--animation-1: margin 1.5s var(--animation-jump-both) 1 backwards, opacity 1.5s var(--animation-jump-both) 1 backwards;
-    --animation-jump-both: cubic-bezier(.62,.21,.25,1);
 	--animation-jump-both: cubic-bezier(.62,.21,.25,1);
 }
 .welcome-word .thanks {
@@ -4228,8 +4233,6 @@ div#author-info__sayhi {
     width: 100%;
 }
 
-
-
 @keyframes stars {
 	50% {
 		box-shadow: 0 0 0.2rem 0 var(--star-shadow-out), inset -0.5rem -0.5rem 1rem 0 var(--star-shadow-in);
@@ -4257,5 +4260,19 @@ div#author-info__sayhi {
 }
 }
 
-
-
+@keyframes margin{
+	0% {
+		transform: translateY(1rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes opacity{
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}

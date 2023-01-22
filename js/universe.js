@@ -385,6 +385,12 @@ for (i = 0; i < s.length; i++) {
 	s[i].parentNode.insertBefore(para,s[i]);
 }
 
+
+//星语页
+if(window.location.href == "http://localhost:4000/sawords/"||window.location.href == "https://asa-world.github.io/sawords/"||window.location.href == "https://asa-world.cn/sawords/"||window.location.href == "http://asa-world.cn/sawords/"){
+	randomstar();
+}
+
 //随机生成星球
 function randomstar(){
 	var g = document.querySelectorAll(".sagroups");//获取指定元素
@@ -406,9 +412,8 @@ function randomstar(){
 		s[i].style.width =  size  + "em";
 		s[i].style.height =  size  + "em";
 	}
-	
 }
-randomstar();
+
 
 //随机生成
 function randomNum(minNum,maxNum){ 
@@ -424,3 +429,5 @@ function randomNum(minNum,maxNum){
             break; 
     } 
 } 
+
+
