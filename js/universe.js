@@ -403,14 +403,16 @@ function randomstar(){
 		var top = randomNum(-900,520);
 		var left = randomNum(1,80);
 		var size = randomNum(20,100)/100*2.2;
+		var bling_dely = randomNum(0,s.length);
 		while((top>-683 && top<432) && left >50 ){
 			var top = randomNum(-900,520);
 			var left = randomNum(1,80);
 		}
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
-		s[i].style.width =  size  + "em";
-		s[i].style.height =  size  + "em";
+		s[i].style.setProperty('--star-size',size+"em");
+		s[i].style.setProperty('--star-shadow-size',(size/2)+"em");
+		s[i].style.setProperty('--animation-delay',bling_dely+"s");
 	}
 }
 

@@ -29,6 +29,8 @@
   --style-border-hover: 1px solid var(--asa-main);
   --style-border-hover-always: 1px solid var(--asa-main);
   --style-border-dashed: 1px dashed var(--asa-theme-op);
+  --star-size: 0.2em;
+  --star-shadow-size: 0.2em;
 }
 
 /* 文字选择时 */
@@ -309,7 +311,16 @@
 	display: none;
 }
 
-
+#post #article-container p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    font-weight: 400;
+}
+#post #article-container p {
+    margin: 1rem 0;
+    text-align: left;
+    letter-spacing: 0.6px;
+}
 
 #recent-posts>.recent-post-item>.recent-post-info>.article-title {
     -webkit-line-clamp: 2!important;
@@ -4120,11 +4131,11 @@ div#author-info__sayhi {
     --animation-delay: 0s;
 	--animation-jump-both: cubic-bezier(.62,.21,.25,1);
     position: relative;
-    width: 0.2em;
-    height: 0.2em;
+    width: var(--star-size);
+    height: var(--star-size);
     background: linear-gradient(#19b5fe, #7befb2);
     border-radius: 50%;
-	box-shadow: 0 0 1rem 0.5rem var(--star-shadow-out), inset 0 0 0.2rem 0 var(--star-shadow-out);	
+	box-shadow: 0 0 var(--star-shadow-size) var(--star-shadow-size) var(--star-shadow-out), inset 0 0 1.5rem 0.5rem var(--asa-white);	
 	display: inline-block;
 	animation: stars var(--animation-duration) var(--animation-jump-both) var(--animation-delay) infinite;
 	transition: .7s;
