@@ -522,9 +522,9 @@ document.addEventListener('DOMContentLoaded', function () {
       case 'sentence':
         rightSideFn.sentence()
         break
-      case 'go-up':
-        rightSideFn.scrollToTop()
-        break
+      //case 'go-up':
+        //rightSideFn.scrollToTop()
+        //break
       case 'rightside_config':
         rightSideFn.showOrHideBtn($target)
         break

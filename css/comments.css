@@ -19,166 +19,178 @@
 	transition: all 0.2s ease-in-out 0s;
 }
 
-/* 调整楼中楼样式 ，整体左移，贴合气泡化效果 */
-.tk-replies {
-  left: -70px;
-  width: calc(100% + 70px);
+/* Twikoo评论输入框设置*/
+.tk-meta-input{
+	margin: 0.5em 0;
+	width: calc(100% - 5.5rem);
 }
-/* 头像宽度调整 rem单位与全局字体大小挂钩，需配合自己情况调整大小以保证头像显示完整*/
-.tk-replies .tk-avatar {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
+#twikoo .tk-row .tk-col {
+    flex-direction: column-reverse;
 }
-.tk-replies .tk-avatar img {
-  width: 2.5rem !important;
-  height: 2.5rem !important;
-}
-/* 回复框左移，避免窄屏时出框 */
-.tk-comments-container .tk-submit {
-  position: relative;
-  left: -70px;
-  width: 110%;
-}
-/* 评论块气泡化修改 */
-.tk-content {
-  background: #00a6ff; /*默认模式访客气泡配色*/
-  padding: 10px;
-  color: #fff; /*默认模式访客气泡字体配色*/
-  border-radius: 10px;
-  font-size: 16px !important;
-  width: fit-content;
-  max-width: 100%;
-  position: relative !important;
-  overflow: visible !important;
-  max-height: none !important;
-  border-style: ridge;
-  border-color: rgba(255,255,255,.3);
-  border-width: 2px;
-}
-/* 修复图片出框 */
-.tk-content img {
-  max-width: 100% !important;
-}
-/* 修复过长文本出框 */
-.tk-content pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-.tk-content a {
-  color: #eeecaa; /*默认模式超链接配色*/
-}
-.tk-content::before{
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 20px;
-  left: -13px;
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 10px solid #00a6ff; /*默认模式访客气泡小三角配色*/
-  border-left: 0px solid transparent;
-  border-style: ridge;
-  border-color: rgba(255,255,255,.3);
-  border-width: 3px;
+.tk-row .tk-avatar {
+    display: none;
 }
 
-.tk-master .tk-content {
-  background: #ff8080; /*默认模式博主气泡配色*/
-  color: #fff; /*默认模式博主气泡字体配色*/
-  width: fit-content;
-  max-width: 100%;
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before {
+    display: block;
+    animation: commonTipsIn 0.3s;
 }
-.tk-master .tk-content a {
-  color: #eeecaa;
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
+    content: '输入QQ号会自动获取昵称和头像';
 }
-.tk-master .tk-content::before {
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 20px;
-  left: -13px;
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #ff8080; /*默认模式博主气泡小三角配色*/
-  border-left: 0px solid transparent;
-  border-style: ridge;
-  border-color: rgba(255,255,255,.3);
-  border-width: 3px;
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+    content: '收到回复将会发送到你的邮箱';
 }
-.tk-row[data-v-d82ce9a0] {
-  max-width: 100%;
-  width: fit-content;
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+    content: '可以通过昵称访问你的网站';
 }
-.tk-avatar {
-  border-radius: 50%;
-  margin-top: 10px;
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+    display: none;
+    position: absolute;
+    top: -60px;
+    white-space: nowrap;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 14px 18px;
+    background: #444;
+    color: #fff;
+    z-index: 100;
+}
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+    display: block;
+    animation: commonTriangleIn 0.3s;
+}
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+    display: none;
+    content: '';
+    position: absolute;
+    border: 12px solid transparent;
+    border-top-color: #444;
+    left: 50%;
+    transform: translate(-50%, -46px);
+}
+@keyframes commonTipsIn {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+
+  100% {
+    top: -60px;
+    opacity: 1;
+  }
 }
 
-/* 夜间模式配色，具体比照上方默认模式class */
-[data-theme="dark"] .tk-content {
-  background: #000;
-  color: #fff;
-}
-[data-theme="dark"] .tk-content a {
-  color: #dfa036;
-}
-[data-theme="dark"] .tk-content::before {
-  border-right: 15px solid #000;
-}
-[data-theme="dark"] .tk-master .tk-content {
-  background: #000;
-  color: #fff;
-}
-[data-theme="dark"] .tk-master .tk-content a {
-  color: #dfa036;
-}
-[data-theme="dark"] .tk-master .tk-content::before {
-  border-top: 2px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-right: 15px solid #000;
-  border-left: 0px solid transparent;
-  content: '';
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 20px;
-  border-style: ridge;
-  border-color: rgba(255,255,255,.3);
-  border-width: 3px;
+@keyframes commonTriangleIn {
+  0% {
+    transform: translate(-50%, -36px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-50%, -46px);
+    opacity: 1;
+  }
 }
 
-/* pc屏自适应内容 */
-@media screen and (min-width: 1024px) {
-  /* 设置宽度下限，避免挤压博主头像 */
-  .tk-content {
-    max-width: 75%;
-    width: fit-content;
-  }
-  .tk-master .tk-content {
-    width: 75%;
-	left: calc(75% - 520px);
-  }
-  .tk-master .tk-content::before {
-    left: 100%;
-    border-left: 15px solid #ff8080;
-    border-right: 0px solid transparent;
-  }
-  .tk-master .tk-avatar {
-    position: relative;
-    left: calc(75% + 70px);
-  }
-  .tk-master .tk-row[data-v-d82ce9a0] {
-    position: relative;
-    top: 0px;
-    left: calc(75% - 190px);
-  }
-[data-theme="dark"] .tk-master .tk-content::before {
-    border-left: 15px solid #000;
-    border-right: 0px solid transparent;
-  }
+/* Twikoo表情栏设置*/
+.tk-row-actions-start {
+    position: absolute;
+    top: -100px;
+    left: -35px;
 }
+#twikoo>div.tk-comments>div.tk-submit>div.tk-row.actions>a,.el-button.tk-preview {
+    display: none;
+}
+
+.twikoo .el-button--primary.is-disabled, .twikoo .el-button--primary.is-disabled:active, .twikoo .el-button--primary.is-disabled:focus, .twikoo .el-button--primary.is-disabled:hover {
+    color: rgba(255,255,255,0.63);
+    background-color: rgba(64,158,255,0.50);
+    border-color: transparent;
+}
+.tk-comments .el-button--primary.is-disabled, .tk-comments .el-button--primary.is-disabled:active, .tk-comments .el-button--primary.is-disabled:focus, .tk-comments .el-button--primary.is-disabled:hover {
+    opacity: 0.4;
+}
+
+.el-button--primary.is-disabled, .el-button--primary.is-disabled:active, .el-button--primary.is-disabled:focus, .el-button--primary.is-disabled:hover {
+    color: #FFF;
+    background-color: #a0cfff;
+    border-color: #a0cfff;
+}
+
+.el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover {
+    color: #C0C4CC;
+    cursor: not-allowed;
+    background-image: none;
+    background-color: #FFF;
+    border-color: #EBEEF5;
+}
+
+.el-button+.el-button {
+    margin-left: 10px;
+}
+.tk-comments .el-button--primary {
+	background-color: var(--asa-main)!important;
+    border-color: var(--asa-fontcolor) !important;
+    color: var(--asa-card-bg) !important;
+    border-radius: 4px !important;
+    box-shadow: var(--asa-shadow-black);
+    transition: 0.3s;
+    width: 5rem;
+    position: absolute;
+    top: -55px;
+    right: 0px;
+    margin-left: 0.5rem !important;
+    height: 32px;
+}
+.el-button{
+	border: unset!important;
+}
+
+/*手机适配*/
+@media screen and (max-width: 768px) {
+	/* Twikoo表情栏设置*/
+	.tk-row-actions-start {
+		position: absolute;
+		top: -200px;
+		left: -35px;
+	}
+	.tk-comments .el-button--primary {
+		width: 3rem;
+		top: -159px;
+	}
+	.el-button--small {
+    padding: 65px 15px!important;
+	}
+	#twikoo > div.tk-comments > div.tk-submit > div.tk-row.actions > button.el-button.tk-send.el-button--primary.el-button--small.is-disabled > span{
+		margin-left: -0.2em;
+	}
+	.tk-meta-input {
+		width: calc(100% - 4.1rem);
+	}
+}
+
+
+/* Twikoo评论区字体设置*/
+.tk-meta > a{
+	
+    color: var(--asa-main);
+    font-size: x-large;
+
+}
+.tk-main{
+	margin-top: -0.3em;
+}
+.tk-meta > small.tk-time{
+    color: var(--asa-secondtext);
+    font-size: initial;
+    margin-left: 0.3em;
+}
+.tk-tag {
+    font-size: 0.85em;
+}
+
 /* 设备名称常态隐藏，悬停评论时显示 */
 .tk-extras {
   opacity: 0;
