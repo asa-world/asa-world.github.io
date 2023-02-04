@@ -895,11 +895,13 @@ a.darkmode_switchbutton:hover{
 	display:none;
 }*/
 
-
+#article-container a {
+    color: var(--asa-main);
+}
 
 /* 加粗样式美化 */
 #article-container > p > strong,#article-container > ul > li > strong {
-	color: var(--asa-white);
+	color: var(--asa-fontcolor);
 }
 
 /* 气泡注释样式 */
@@ -3754,6 +3756,9 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 
 /* 侧边栏样式 
 ---------------------------------------------------------------------------------------------------- */
+#aside-content .card-widget{
+	background: var(--asa-card-bg);
+}
  
 /* 网站信息侧边栏 */
 .webinfo-item>i,.webinfo-item>div{
@@ -4282,4 +4287,15 @@ div#author-info__sayhi {
 	100% {
 		opacity: 1;
 	}
+}
+
+/*tags页样式
+------------------------------------------------*/
+.article-sort-item-img {
+
+    width: 140px;
+}
+.article-sort-item-title {
+    font-weight: bold;
+    font-size: 1.2em;
 }
