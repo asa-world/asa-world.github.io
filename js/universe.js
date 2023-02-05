@@ -46,6 +46,12 @@ function dark(){
 	}()
 };
 
+/*视频懒加载*/
+if(document.querySelector(".video > video") != null){
+	var video=document.querySelector(".video > video");
+	video.setAttribute("preload","none");
+}
+
 
 //模式切换
 function switchDarkMode() { // Switch Between Light And Dark Mode

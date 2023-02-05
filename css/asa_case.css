@@ -306,6 +306,10 @@
 
 /* 全局样式 
 ---------------------------------------------------------------------------------------------------- */
+blockquote> p{
+	margin: 0!important;
+}
+
 
 #post #article-container p {
     font-size: 1.1rem;
@@ -317,6 +321,7 @@
     text-align: left;
     letter-spacing: 0.6px;
 }
+
 
 #recent-posts>.recent-post-item>.recent-post-info>.article-title {
     -webkit-line-clamp: 2!important;
@@ -3359,6 +3364,15 @@ figure.gallery-group:hover .gallery-group-name::after {
 
 /* 文章页
 ---------------------------------------------------------------- */
+/*列表符号样式*/
+#article-container.post-content li::marker {
+    color: var(--asa-main);
+	font-weight: 700;
+}
+#article-container.post-content ul li::marker {
+    content:"● ";
+	font-size: 1.3em;
+}
 
 /*顶部信息样式*/
 .meta-firstline>span {
