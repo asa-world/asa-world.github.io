@@ -1917,3 +1917,10 @@ flex-direction:row!important;
     width: calc(100% - 12px)!important;
     }
 }
+
+/*星语页适配*/
+@media screen and (max-width: 1190px){
+	.countnum{
+		display:none;
+	}
+}

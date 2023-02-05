@@ -870,7 +870,7 @@ a.darkmode_switchbutton:hover{
   }
 ::-webkit-scrollbar-track {
   /*滚动条里面轨道*/
-  background   : var(--asa-black);
+  background   : transparent;
   border-radius: 10px;
   }
 
@@ -4218,8 +4218,7 @@ div#author-info__sayhi {
 	text-align: center;
     position: relative;
     float: right;
-    margin-right: 15em;
-
+    margin-right:calc((100% - 1190px) / 2);
     bottom: 16em;
 }
 .thetitle{

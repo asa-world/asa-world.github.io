@@ -394,8 +394,24 @@ for (i = 0; i < s.length; i++) {
 
 //星语页
 if(window.location.href == "http://localhost:4000/sawords/"||window.location.href == "https://asa-world.github.io/sawords/"||window.location.href == "https://asa-world.cn/sawords/"||window.location.href == "http://asa-world.cn/sawords/"){
-	randomstar();
+	if(window.screen.width<768){
+		nopei();
+	}
+	else{
+		randomstar();
+	}
 }
+
+//移动端（不）适配
+function nopei(){
+	document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/1675597149902.png)";
+	document.querySelector("body").style.backgroundSize = "cover";
+	document.querySelector("#content-inner").style.display = "none";
+	document.querySelector("#footer").style.display = "none";
+	btf.snackbarShow('本页仅适配电脑端');
+	
+}
+
 
 //随机生成星球
 function randomstar(){
@@ -403,15 +419,14 @@ function randomstar(){
 	var s = document.querySelectorAll(".minstar");//获取指定元素
 	var num = document.querySelector(".wordnum");//获取指定元素
 	var i;
-	console.log(num);
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
-		var top = randomNum(-900,520);
+		var top = randomNum(-900,300);
 		var left = randomNum(1,80);
 		var size = randomNum(20,100)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
-		while((top>-683 && top<432) && left >50 ){
-			var top = randomNum(-900,520);
+		while((top>-683 && top<162) && left >50 ){
+			var top = randomNum(-900,300);
 			var left = randomNum(1,80);
 		}
 		g[i].style.top = top + "px";
