@@ -4189,7 +4189,7 @@ div#author-info__sayhi {
     color: hsl(214deg 77% 77%);
     text-shadow: 0 0 1rem hsl(214deg 77% 30 / 70%);
 	position: absolute;
-    margin-top: 13em;
+    margin-top: -50em;
     margin-left: 7em;
     grid-area: 1 / 1 / 
 }

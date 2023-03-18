@@ -419,16 +419,13 @@ function randomstar(){
 	var s = document.querySelectorAll(".minstar");//获取指定元素
 	var num = document.querySelector(".wordnum");//获取指定元素
 	var i;
+	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
 		var top = randomNum(-900,300);
-		var left = randomNum(1,80);
+		var left = randomNum(1,60);
 		var size = randomNum(20,100)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
-		while((top>-683 && top<162) && left >50 ){
-			var top = randomNum(-900,300);
-			var left = randomNum(1,80);
-		}
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
 		s[i].style.setProperty('--star-size',size+"em");
@@ -453,4 +450,15 @@ function randomNum(minNum,maxNum){
     } 
 } 
 
+//判断元素重叠
+function elementsOverlap(el1, el2) {
+  const domRect1 = el1.getBoundingClientRect();
+  const domRect2 = el2.getBoundingClientRect();
 
+  return !(
+    domRect1.top > domRect2.bottom ||
+    domRect1.right < domRect2.left ||
+    domRect1.bottom < domRect2.top ||
+    domRect1.left > domRect2.right
+  );
+}
