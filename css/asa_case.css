@@ -4150,7 +4150,6 @@ div#author-info__sayhi {
     height: var(--star-size);
     background: linear-gradient(#19b5fe, #7befb2);
     border-radius: 50%;
-	box-shadow: 0 0 var(--star-shadow-size) var(--star-shadow-size) var(--star-shadow-out), inset 0 0 1.5rem 0.5rem var(--asa-white);	
 	display: inline-block;
 	animation: stars var(--animation-duration) var(--animation-jump-both) var(--animation-delay) infinite;
 	transition: .7s;
@@ -4259,8 +4258,15 @@ div#author-info__sayhi {
 }
 
 @keyframes stars {
+	0%{
+		box-shadow: 0 0 var(--star-shadow-size) var(--star-shadow-size) var(--star-shadow-out), inset 0 0 1.5rem 0.5rem var(--asa-white);	
+	}
 	50% {
 		box-shadow: 0 0 0.2rem 0 var(--star-shadow-out), inset -0.5rem -0.5rem 1rem 0 var(--star-shadow-in);
+	}
+	100%{
+		box-shadow: 0 0 var(--star-shadow-size) var(--star-shadow-size) var(--star-shadow-out), inset 0 0 1.5rem 0.5rem var(--asa-white);	
+
 	}
 }
 

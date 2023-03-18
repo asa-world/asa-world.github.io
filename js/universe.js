@@ -422,9 +422,9 @@ function randomstar(){
 	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
-		var top = randomNum(-900,300);
+		var top = randomNum(-900,170);
 		var left = randomNum(1,60);
-		var size = randomNum(20,100)/100*2.2;
+		var size = randomNum(10,80)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
@@ -432,6 +432,7 @@ function randomstar(){
 		s[i].style.setProperty('--star-shadow-size',(size/2)+"em");
 		s[i].style.setProperty('--animation-delay',bling_dely+"s");
 	}
+	g[s.length-1].style.top = "170px";
 }
 
 
