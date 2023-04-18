@@ -833,6 +833,7 @@ a.darkmode_switchbutton:hover{
 	font-weight: bold;
 	padding-left: 60px;
 	padding-right: 60px;
+	display: flow-root;
 
 }
 #footer-wrap div,#footer-wrap p{
@@ -843,15 +844,17 @@ a.darkmode_switchbutton:hover{
 	display: none;
 }
 .copyright{
-	float: left;
-}
-#foot_r{
 	float: right;
 }
-#foot_r {	
-	line-height: 40%;
+#foot_r,#foot_b,#jing-img{
+	float: left;
 }
-
+#jing-img{
+	padding-top: 3px;
+	padding-left: 10px;
+	padding-right: 3px;
+}
+    
 /* 滚动条 */
 ::-webkit-scrollbar {
   /*滚动条整体样式*/

@@ -141,14 +141,6 @@ var typed = new Typed("#footer-banner", {
   loop: true,
   backSpeed: 20
   })
-var typed = new Typed("#footer-banner-tips", {
-  strings: ["兴趣是最好的老师","Take action to think, to change, to create."],
-  startDelay: 200,
-  backDelay: 2000,
-  typeSpeed: 70,
-  loop: true,
-  backSpeed: 20
-  })
 /*
 function mouseScrollDirection ( fn ) {
     var beforeScrollTop = document.documentElement.scrollTop || document.body.scrollTop,
