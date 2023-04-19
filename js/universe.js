@@ -410,21 +410,38 @@ function randomstar(){
 	var g = document.querySelectorAll(".sagroups");//获取指定元素
 	var s = document.querySelectorAll(".minstar");//获取指定元素
 	var num = document.querySelector(".wordnum");//获取指定元素
+	var mains = document.querySelector("#main-star");//获取指定元素
 	var i;
+	console.log(mains.getBoundingClientRect().top);
+	console.log(mains.getBoundingClientRect().bottom);
 	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
-		var top = randomNum(-900,170);
-		var left = randomNum(1,60);
+		if(i<s.length/4){
+			var top = randomNum(-1000,-700);
+			var left = randomNum(1,99);
+		}
+		if(i>s.length/4 && i<s.length/2){
+			var top = randomNum(-900,-300);
+			var left = randomNum(1,60);
+		}
+		if(i>s.length/2){
+			var top = randomNum(-400,0);
+			var left = randomNum(1,99);
+		}
 		var size = randomNum(10,80)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
+
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
 		s[i].style.setProperty('--star-size',size+"em");
 		s[i].style.setProperty('--star-shadow-size',(size/2)+"em");
 		s[i].style.setProperty('--animation-delay',bling_dely+"s");
 	}
-	g[s.length-1].style.top = "170px";
+	
+	
+	g[s.length-1].style.top = "0px";
+	//console.log(g[s.length-1].getBoundingClientRect().top);
 }
 
 
@@ -448,7 +465,7 @@ function elementsOverlap(el1, el2) {
   const domRect1 = el1.getBoundingClientRect();
   const domRect2 = el2.getBoundingClientRect();
 
-  return !(
+  return (
     domRect1.top > domRect2.bottom ||
     domRect1.right < domRect2.left ||
     domRect1.bottom < domRect2.top ||
