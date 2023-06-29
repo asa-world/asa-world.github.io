@@ -249,11 +249,11 @@ if(window.location.href == "http://localhost:4000/archives/"||window.location.hr
 
 }
 
-
-if(document.querySelector('.aside-content').style.display == 'none'){
-	  document.querySelector('#page').style.margin = 'auto';
+if(document.querySelector('.aside-content') != null){
+	if(document.querySelector('.aside-content').style.display == 'none'){
+		  document.querySelector('#page').style.margin = 'auto';
+	}
 }
-
 /*显示运行时间*/
 if(window.location.href == "http://localhost:4000/about/"||window.location.href == "https://asa-world.github.io/about/"||window.location.href == "https://asa-world.cn/about/"||window.location.href == "http://asa-world.cn/about/"){
 show_date_time();
@@ -357,14 +357,17 @@ if(window.location.href == "http://localhost:4000/about/"||window.location.href 
 
 
 //判断时间
-let date=new Date();
-if(date.getHours()>=0&&date.getHours()<12){
-  document.getElementById("author-info__sayhi").innerText ="上午好! 我是";
-}else if(date.getHours()>=12&&date.getHours()<18){
-  document.getElementById("author-info__sayhi").innerText = "下午好! 我是";
-}else{
-  document.getElementById("author-info__sayhi").innerText = "晚上好! 我是";
+if(document.getElementById("author-info__sayhi")!=null){
+	let date=new Date();
+	if(date.getHours()>=0&&date.getHours()<12){
+	  document.getElementById("author-info__sayhi").innerText ="上午好! 我是";
+	}else if(date.getHours()>=12&&date.getHours()<18){
+	  document.getElementById("author-info__sayhi").innerText = "下午好! 我是";
+	}else{
+	  document.getElementById("author-info__sayhi").innerText = "晚上好! 我是";
+	}
 }
+
 /*
 var s = document.querySelectorAll(".article-meta.tags>a");
 
