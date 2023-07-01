@@ -88,6 +88,8 @@ var type = document.querySelector("meta[property='og:type']").content;
 if(type == 'article'){
 	var color = document.getElementsByTagName('meta')['img-color'].content;
 	document.documentElement.style.setProperty('--asa-main',color);
+	document.documentElement.style.setProperty('--heo-lighttext',color);
+	document.documentElement.style.setProperty('--heo-main',color);
 	document.querySelector("#post-cover").classList.remove("loading");
 	document.querySelector("#post-cover").classList.add("loaded");
 }
