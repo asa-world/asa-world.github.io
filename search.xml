@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>接入网实验：基于802.1X控制的LAN接入实验</title>
+      <link href="/d25741a1/"/>
+      <url>/d25741a1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="实验目的">实验目的</h1><ul><li>掌握 802.1X 接入控制模式结构、原理及特点；</li><li>掌握 802.1X 服务器和客户端的配置方法；</li><li>掌握不同 802.1X 客户划分不同 VLAN 的应用及配置方法；</li><li>理解并掌握 VLAN 通信的测试方法；</li><li>掌握 802.1X 的认证过程及测试方法。</li></ul><h1 id="实验内容">实验内容</h1><ul><li>VLAN 的配置与测试；</li><li>DHCP 服务器的配置；</li><li>LAN 802.1X 接入控制方式配置与测试；</li><li>用户独享帐户，通过认证和授权，接入外网。</li></ul><h1 id="实验器材">实验器材</h1><ul><li>以太交换机 2 台；</li><li>PC 级 6-8 台（用途： 1 台 Radius 服务器，1 台 DHCP+NAT 服务器，1 台外网主机，1 台配置机，3-4 台 802.1X 客户机）；</li><li>USB 接口的以太网卡：科 B119 房间 2 个，科 B121 房间 7-9 个；</li><li>USB 转串口配置线 1 根（仅科 B121 实验室需要）；</li><li>网线：科 B119 房间 1 根，科 B121 房间 7-9 根。</li></ul><h1 id="实验原理">实验原理</h1><h2 id="系统结构">系统结构</h2><p>802.1X+RADIUS 接入认证与控制方式基于 802.1X 协议,在交换机接入端口上对用户进行接入控制，系统结构如下图所示。图中连接用户的以太交换机必须支持 802.1X 协议，基于端口实现对用户的接入控制。用户 PC 上必须运行 TCP/IP 协议和 802.1X 协议。802.1X 接入交换机与 RADIUS 服务器之间运行 RADIUS 协议，由 RADIUS 服务器实现对用户身份合法性进行认证，并对认证通过的用户进行授权。</p><p><img src="https://image.asa-world.cn/pic/image-20230702204731456.png" alt="802.1X+RADIUS 接入认证与控制系统结构"></p><h2 id="基本原理">基本原理</h2><p>802.1X协议是一个基于端口的接入控制协议。其接入控制基本原理如下图所示。</p><p><img src="https://image.asa-world.cn/pic/image-20230702204806704.png" alt="802.1X的接入控制基本原理"></p><p>802.1X 协议的接入端口在逻辑上分为两个逻辑端口：受控端口和非受控端口。非受控端口始终处于连通状态，用来传送认证信息。受控端口默认情况下处于断开状态，只有在认证通过后才接通，用来传送用户的业务数据。</p><p>因此，在认证没有通过前，用户只能通过 802.1X 接入交换机传送认证信息，接入交换机再通过 RADIUS 协议把认证信息送到 RADIUS 服务器上，由 RADIUS 服务器进行认证，并把认证的结果返回给接入交换机。接入交换机根据认证结果控制用户的接入，若认证成功，则接通受控端口，允许用户接入，否则，受控端口继续保持为断开状态，拒绝用户接入，从而 802.1X 协议基于端口实现了对用户的接入控制。</p><h1 id="实验拓扑">实验拓扑</h1><p>本实验是基于 VLAN 应用的 802.1X 接入控制的接入实验，需要对 802.1X 交换机上开启802.1X 协议、配置 RADIUS 客户端、配置 VLAN，在 PC 机上配置 802.1X 客户端，用户通过RASIUD 服务器认证授权后，802.1X 服务器控制接入（802.1X 交换机接通受控端口），由 DHCP服务器为 802.1X 客户分配 IP 地址，然后 802.1X 客户通过 PCI 以太网连接到 Internet。实验拓扑如图下图所示。</p><p><img src="https://image.asa-world.cn/pic/image-20230702204948590.png" alt="基于VLAN的802.1X接入控制实验拓扑图"></p><center>表 2-1 实验设备描述</center><table><thead><tr><th>图中标注设备功能</th><th>数量（台）</th><th>实际使用设备</th><th>说明</th></tr></thead><tbody><tr><td>接入用户区PC(802.1X客户)</td><td>3-4</td><td>实验室PC或笔记本电脑</td><td>运行windows系统(可以选择“wireshark”镜像)</td></tr><tr><td>配置机</td><td>1</td><td>实验室PC</td><td>科B119运行widows系统(选择wireshark镜像)</td></tr><tr><td>L2/SW</td><td>2</td><td>实验室以太网交换机</td><td>科B119为SRG-3760-24</td></tr><tr><td>RADIUS服务器</td><td>1</td><td>实验室PC</td><td>运行Iinux系统(选择“接入网实验全家桶”镜像)</td></tr><tr><td>网关（DHCP、NAT服务器）</td><td>1</td><td>实验室PC</td><td>运行Iinux系统(选择“接入网实验全家桶”镜像)<br />上图中，网关有三个外联接口：<br/>ens3:电脑以太网口（去校园网）<br/>enx000 XXXXxXXXX:外联USB网卡（119已有）<br/>enx000 KXXxxxXXx:外联USB网卡（自行插入）<br/>（以实际网卡名称为准）</td></tr><tr><td>外网主机</td><td>1</td><td>实验室PC</td><td>运行windows系统(选择“wireshark”镜像)</td></tr></tbody></table><h1 id="实验步骤与记录">实验步骤与记录</h1><h2 id="设备连接与实验准备">设备连接与实验准备</h2><p>根据实际设备与L2/SW1连接端口，VLAN规划并确定相关设备端的IP地址，记录如表3-1。</p><center>表3-1 拓扑规划</center><table><thead><tr><th>端口号</th><th>连接功能设备</th><th>VLAN ID</th><th>实验USB网卡的IP地址</th></tr></thead><tbody><tr><td>1  @交换机1</td><td>802.1X客户1（PC1）</td><td>2</td><td>172.16.22.10-100/24</td></tr><tr><td>2  @交换机1</td><td>802.1X客户2（PC2）</td><td>2</td><td>172.16.22.10-100/24</td></tr><tr><td>3  @交换机1</td><td>802.1X客户3（PC3）</td><td>3</td><td>172.16.33. 10-100/24</td></tr><tr><td>4  @交换机1</td><td>802.1X客户4（PC4）</td><td>3</td><td>172.16.33. 10-100/24</td></tr><tr><td>5  @交换机1</td><td>网关设备内网子接口1 （PC1和PC2的网关）</td><td>2</td><td>172.16.22.2/24</td></tr><tr><td>5  @交换机1</td><td>网关设备内网子接口2 （PC3和PC4的网关）</td><td>3</td><td>172.16.33.2/24</td></tr><tr><td>×</td><td>802.1X服务器</td><td>1</td><td>172.16.3.210/24</td></tr><tr><td>5  @交换机1</td><td>802.1X服务器的网关</td><td>1</td><td>172.16.3.254/24</td></tr><tr><td>1  @交换机2</td><td>网关设备外网接口</td><td>×</td><td>192.168.0.200/24</td></tr><tr><td>2  @交换机2</td><td>RADIUS服务器</td><td>×</td><td>192.168.0.201/24</td></tr><tr><td>3  @交换机2</td><td>外网主机</td><td>×</td><td>192.168.0.203/24</td></tr></tbody></table><h2 id="网关配置">网关配置</h2><p>网关设备在实验中需要使用两块 USB 实验网卡，在实验准备中已经将 USB 网卡接入网关 PC，且已连接到相关交换机端口。作为网关的 PC 选择“接入网实验全家桶”镜像，操作系统为 Ubuntu22.04，密码为 123456。</p><p>（1）配置 VLAN trunk 端口与子接口IP地址</p><ol><li>识别连接内网的USB网卡（连接交换机1的USB网卡），加载8021q 模块；</li><li>添加vlan2和vlan3，注：重启后配置会消失，如不慎重启请重新配置；</li><li>配置IP 地址，再次使用 ifconfig 命令查看，确认上述配置的正确性。</li></ol><p>（2）配置 DHCP 服务器</p><ol><li>在支持vlan2和vlan3的USB网卡(连接内网的USB网卡)上开启DHCP监听功能。并修改配置文件；</li><li>修改 DHCP 配置文件，重启 DHCP 服务；</li></ol><p>（3）连接外网的USB网卡的识别与配置</p><ol><li>可以通过拔插 USB 网卡，并结合采用 ifconfig 命令查看，确认连接外网的 USB 网卡的名称为 enx000xxxxxxxxx ；</li><li>对连接外网的 USB 网卡按照表3-1规划配置 IP 地址；</li><li>通信测试：在连接外网 USB 网卡的网络上 ping Radius 服务器或外网主机应能 ping通。</li></ol><p>（4）配置NAT规则</p><h2 id="vlan配置与测试">VLAN配置与测试</h2><p>（1）进入配置界面</p><p>科 B119 实验室的联网设备都放置在机柜里，对联网设备的配置是通过 web进入配置界面的，进入特权模式并进入全局配置模式。</p><p><img src="https://image.asa-world.cn/pic/image-20230702210517499.png" alt="配置界面"></p><p>（2）创建VLAN2和3</p><p>（3）access端口配置</p><p>按照拓扑中连接的 access 端口以及规划的 VLAN-ID，逐一进入端口进行配置，其他端口类同。</p><p>（4）Trunk 端口配置</p><p>L2/SW1 连接网关（DHCP/S 和NAT）的端口为Trunk 端口。</p><p>（5）VLAN 通信测试</p><ol><li><p>查看PC机获得的IP地址</p><center>表3-2各PC机的IP地址</center><table><thead><tr><th>实验主机</th><th>连L2/SW1端口号</th><th>VLAN-  ID</th><th>获取的IP地址</th></tr></thead><tbody><tr><td>PC1-2</td><td>f0/1</td><td>2</td><td>172.16.22.11</td></tr><tr><td>PC2-4</td><td>f0/2</td><td>2</td><td>172.16.22.10</td></tr><tr><td>PC3-8</td><td>f0/3</td><td>3</td><td>172.16.33.10</td></tr><tr><td>PC4-10</td><td>f0/4</td><td>3</td><td>172.16.33.11</td></tr></tbody></table></li><li><p>VLAN通信测试</p><center>表3-3  VLAN 通信测试</center><table><thead><tr><th>实验主机操作</th><th>测试结果</th></tr></thead><tbody><tr><td>PC1-PC2相互ping</td><td>通</td></tr><tr><td>PC3-PC4相互ping</td><td>通</td></tr><tr><td>PC1 ping网关（子接口1）</td><td>通</td></tr><tr><td>PC4 ping网关（子接口2）</td><td>通</td></tr><tr><td>PC1  ping 外网主机</td><td>通</td></tr><tr><td>PC4  ping RADIUS服务器</td><td>通</td></tr></tbody></table></li></ol><h2 id="802-1x服务器与radius客户配置与记录">802.1X服务器与RADIUS客户配置与记录</h2><ol><li>配置并记录管理VLAN ID号和 IP地址；</li><li>管理VLAN ID号为1，管理VLAN IP地址为172.16.3.0/24；</li><li>802.1X服务的开启：包括打开AAA、802.1X认证方法、应用方法及计账方法列表；</li><li>配置RADIU客户端：包括访问的RADIUS服务器的 IP 地址、认证/授权端口及记账端口，加密 key，snmp 等；</li><li>开启802.1X端口接入控制：包括将接入测试PC 机的那几个端口开启802.1X接入控制，交换机其他端口不能开启 802.1X 接入端口控制。</li></ol><center>表3-4 RADIUS客户端配置参数记录</center><table><thead><tr><th>RADIUS服务器IP地址</th><th>认证端口</th><th>记账端口</th><th>加密key</th></tr></thead><tbody><tr><td>192.168.0.201</td><td>1812</td><td>1813</td><td>test</td></tr></tbody></table><p>完成上述配置后进行连通性测试，各VLAN内的PC相互ping，观察是否能ping通，用802.1X协议原理解释观察到的现象：</p><ul><li><p>PC1 和PC2相互ping，现象记录：不通 。</p></li><li><p>PC3 和PC4相互ping，现象记录：不通 。</p></li><li><p>PC1 ping 外网主机，现象记录：不通 。</p><p>造成上述现象的原因分析：此时PC还没有进行用户认证，所以受控端口未接通，ping的业务数据不能通过。</p></li></ul><h2 id="radius服务器配置">RADIUS服务器配置</h2><p>在RADIUS服务器中配置的认证的相关信息记录如下：配置RADIUS客户端的IP地址是172.16.3.210；与RADIUS客户端的共享密钥是test。配置的账户名和密码，记录如表3-5所示。</p><center>表3-5 接入账户和密码</center><table><thead><tr><th>账户名</th><th>密码</th></tr></thead><tbody><tr><td>user1</td><td>1</td></tr><tr><td>user2</td><td>1</td></tr><tr><td>user3</td><td>1</td></tr><tr><td>user4</td><td>1</td></tr></tbody></table><h2 id="802-1x客户端配置与记录">802.1X客户端配置与记录</h2><p>802.1X客户端在PC机上配置。采用Windows 自带的802.1X客户程序。在各PC机上配置的内容包括：开启 802.1X 服务，设置与 802.1X 服务器上匹配的加密方式；设置与 RADIUS 服务器上匹配的用户名和密码。</p><p>802.1X加密方式为 EAP-MSCHAP v2；实验者自己使用的密码分别为user2和1 。</p><h2 id="802-1x接入控制测试">802.1X接入控制测试</h2><ol><li><p>各测试PC机用配置好的用户名密码进行登录，成功后，记录各PC机获取的IP地址。并用802.1X 协议原理解释为什么此时PC机能获取IP地址。</p><p>答：PC机获得的IP地址如表3-7所示。用户认证成功后，受控端口接通，用户可以与DHCP服务器正常交互，因此获取到IP地址。</p></li><li><p>登录成功后，各PC机ping 192.168.0.201（RADIUS服务器的IP地址。该地址可以模拟外网），记录测试情况。</p></li><li><p>各PC机ping外网主机t，记录上网情况。</p></li></ol><center>表3-7 802.1X接入控制测试记录</center><table><thead><tr><th>主机</th><th>获取的IP地址</th><th>测试操作</th><th>测试结果</th></tr></thead><tbody><tr><td>PC1</td><td>172.16.22.10</td><td>PC1-2相互ping</td><td>通</td></tr><tr><td>PC2</td><td>172.16.22.11</td><td>PC3-4相互ping</td><td>通</td></tr><tr><td>PC3</td><td>172.16.33.10</td><td>PC1  ping外网主机</td><td>通</td></tr><tr><td>PC4</td><td>172.16.33.11</td><td>PC4  ping外网主机</td><td>通</td></tr></tbody></table><ol start="4"><li><p>选择1台PC机上退出802.1X客户软件，设计1-2种错误配置，并重新进行802.1X接入过程，观察现象，记录结果并分析。</p><ul><li><p>设置的错误配置为：用户名、密码错误</p></li><li><p>现象记录：认证不成功，无法进行业务数据的传输。</p></li><li><p>原因分析：Radius服务器通过比对自己的数据库发现用户名密码错误，导致用户认证失败，所以受控端口未接通，业务数据不能通过，所以不通。</p></li></ul></li></ol><h1 id="实验分析">实验分析</h1><ol><li><p>根据实验过程，总结802.1X认证中对RADIUS客户端配置的主要内容有哪些？</p><p>答：802.1X认证中对RADIUS客户端配置的主要内容主要包括以下内容：</p><ol><li>配置管理vlan；</li><li>Radius服务器地址和共享秘钥；</li><li>开启802.1X服务，开启AAA认证服务；</li><li>配置上联的Radius服务器的IP地址；</li><li>配置Radius key</li><li>在对应端口开启802.1x认证。</li></ol></li><li><p>在本实验802.1X认证中，除了在实验中设计的错误配置外，至少列举3种可能的错误配置会导致认证失败。</p><p>答：可能的错误配置如下：</p><ul><li>RADIUS客户端没启用认证或启用了本地认证；</li><li>RADIUS客户端没正确配置RADIUS服务器的地址和共享密钥；</li><li>交换机的trunk口没有配置；</li><li>RADIUS认证服务器没配置正确的EAP方法；</li><li>客户端没关防火墙，导致认证请求被防火墙阻止。</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目报告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 研究报告 </tag>
+            
+            <tag> 实验 </tag>
+            
+            <tag> 接入网 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>接入网实验：PPPoE本地认证与远端认证接入控制</title>
       <link href="/e9d76f08/"/>
       <url>/e9d76f08/</url>
@@ -414,9 +443,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> 博客搭建 </tag>
+            
+            <tag> 教程 </tag>
             
             <tag> bug </tag>
             
@@ -499,9 +528,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> 博客搭建 </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
@@ -901,9 +930,9 @@
       
         <tags>
             
-            <tag> 教程 </tag>
-            
             <tag> 博客搭建 </tag>
+            
+            <tag> 教程 </tag>
             
         </tags>
       
