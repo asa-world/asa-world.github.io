@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>网络安全实验：服务器的访问以及服务端口的扫描</title>
+      <link href="/cc6fd8f4/"/>
+      <url>/cc6fd8f4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="实验目的">实验目的</h1><ul><li><p>通过ping等命令了解目标主机的可访问性；</p></li><li><p>通过使用网络扫描软件，了解目标主机端口和服务的开放情况，从而进一步获取系统信息，找出系统安全漏洞；</p></li><li><p>通过本次实验，读者可以了解到端口与服务开放的风险，增强在网络安全防护方面的意识。</p></li></ul><h1 id="实验原理">实验原理</h1><p>常用扫描探测命令：ping、tracert ；扫描工具：Superscan和Nmap。</p><h2 id="ping以及tracert">Ping以及tracert</h2><p>ping命令首先会构建一个固定格式的ICMP请求数据包echo request,发给远端计算机；远端计算机收到后，构造一个ICMP应答包echo reply，发送回本机；本机收到应答包后，即可判断出目的主机是否开机，并根据发送包和应答包携带的时间信息计算出网络延迟。</p><p>源主机将构造并向目标主机发送不同TTL值的ICMP请求数据包，tracert诊断程序根据ICMP的回应数据包来确定到目标所采取的路由；</p><p>Tracert程序首先发送 TTL 为1的请求数据包，该包经过第一个路由设备后TTL减1为0，第一个路由设备就将给源主机发回“ICMP已超时”的消息；</p><p>源主机的tracert命令通过该消息中的IP信息就获得了第一个路由设备的IP；</p><p>在随后的每次发送过程将TTL依次递增1，直到目标响应或TTL达到最大值，从而确定从源主机到目的主机中间的路由。</p><h2 id="端口扫描的原理">端口扫描的原理</h2><p>扫描的过程就是向目标主机的端口发送请求数据包，希望建立“连接”，根据目标主机的回应判断其端口是否开放；</p><p>通过扫描判断目标主机端口是否打开的一个最简单的方法，是利用TCP协议的三次握手机制；只要和目标主机的端口能建立TCP的三次握手，说明目标主机的端口是开的，反之则没有打开。</p><h2 id="三次握手">三次握手</h2><p><img src="https://image.asa-world.cn/pic/image-20230702213905843.png" alt="三次握手"></p><ul><li><p>第一次握手：主机A的某个端口向主机B的某个端口发出TCP连接请求数据包，其TCP包头的标志位设置为SYN=1，ACK=0，同时选择一个序号x，表明在后面传送数据时的第一个数据字节的序号是x，这个过程称为第一次握手。</p></li><li><p>第二次握手：主机B的相应端口收到连接请求数据包后，如端口是开放的，则发回确认数据包。在确认数据包中，TCP包头的标志位设置为SYN=1，ACK=1，确认序号为x+1，同时B主机也会生成一个自己的序号y，这个过程称为第二次握手。</p></li><li><p>第三次握手：主机A收到此数据包后，还要向B给出确认数据包，其TCP包头的标志位设置为ACK=1，其确认序号为y+1，这个过程称为第三次握手。</p></li></ul><h2 id="扫描分类">扫描分类</h2><ol><li>全TCP连接</li></ol><p>这种扫描方法使用三次握手，与目标计算机建立标准的TCP连接；</p><p>攻击者首先向目的端口发送一个SYN数据包，如果收到来自该端口的SYN/ACK数据包，就可以判定该端口是开放的；然后攻击者再发送一个ACK数据包；</p><p>如果目标端口是关闭的，攻击者就会收到一个直接返回的RST/ACK数据包；</p><ol start="2"><li>半打开式扫描（SYN扫描）</li></ol><p>在这种扫描技术中，扫描主机同样向目标计算机的指定端口发送SYN数据包，表示希望建立连接。</p><ul><li><p>当端口开放时，目标计算机回应SYN/ACK数据包，这和全TCP连接扫描类似。但是扫描主机接着发送一个RST=1的数据包给目标主机，RST数据包将对TCP连接进行重置，目标计算机因为没有接到相应ACK数据包，从而不会建立三次握手。</p></li><li><p>如果端口是关闭的，则按照TCP协议中端口未开规则处理，由目标主机发送RST/ACK数据包给扫描主机，此时TCP连接依然没有建立。</p></li></ul><p>扫描主机根据目标计算机的回应数据包是SYN/ACK数据包，还是RST/ACK数据包即可判断端口是否打开。</p><ol start="3"><li>秘密扫描</li></ol><p>这种方法的优点在于没有涉及TCP连接的部分，所以比前2种都要安全，所以也被称做秘密扫描；缺点就是不够准确，不能完全识别开放的端口。</p><ol start="4"><li>FIN标记扫描：</li></ol><p>攻击者发送一个FIN=1的TCP报文到目标主机：</p><ul><li><p>端口关闭时，该报文会被丢掉，并返回一个RST报文。</p></li><li><p>端口开放时，该报文只是简单的丢掉，不会返回任何回应。</p></li></ul><h1 id="实验内容及步骤">实验内容及步骤</h1><h2 id="使用ping-tracert命令">使用Ping、Tracert命令</h2><h2 id="安装superscan">安装Superscan</h2><p>首先安装Superscan3.0，安装完毕后，双击程序，进入其主界面。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214249208.png" alt="Superscan3.0界面"></p><h2 id="主机名和ip相互转换">主机名和IP相互转换</h2><p>在SuperScan里面，有两种方法来实现域名（主机名）和IP相互转换：</p><ol><li>通过Hostname Lookup来实现</li></ol><p>在Hostname Lookup的输入框输入需要转换的域名或者IP，按【LookUp】就可以取得结果。如果需要取得自己计算机的IP，可以点击【Me】按钮来取得。</p><p>同时，也可以取得自己计算机的IP设置情况，点击【InterFaces】取得本地IP设置情况。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214354133.png" alt="查找本机"></p><p><img src="https://image.asa-world.cn/pic/image-20230702214402562.png" alt="查看本机ip"></p><ol start="2"><li><p>通过Extract From File实现</p><p>这个功能通过一个域名列表来转换为相应IP地址。选择【Extract from file】，点击【-&gt;】按钮，选择域名列表，进行转换。</p></li></ol><p><img src="https://image.asa-world.cn/pic/image-20230702214441108.png" alt="从文件导入"></p><h2 id="ping功能的使用">Ping功能的使用</h2><p>如下图，在【IP】的【Start】填入起始IP，在【Stop】填入结束IP，然后，在【Scan Type】选择【Ping only】，按【Start】就可以检测了。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214825062.png" alt="ping扫描"></p><h2 id="端口检测">端口检测</h2><p>端口检测可以取得目标计算机提供的服务，同时，也可以检测目标计算机是否有木马。现在，我们来看看端口检测的具体使用。</p><ol><li>检测目标计算机的所有端口</li></ol><p>如果检测的时候没有特定的目的，只是为了了解目标计算机的一些情况，可以对目标计算机的所有端口进行检测。一般不提倡这种检测，因为：</p><ul><li><p>它会对目标计算机的正常运行造成一定影响，同时，也会引起目标计算机的警觉；</p></li><li><p>扫描时间很长；</p></li><li><p>浪费带宽资源，对网络正常运行造成影响。</p><p>在【IP】输入起始IP和结束IP，在【Scan Type】选择最后一项【All Ports From 1 to 65535】，如果需要返回计算机的主机名，可以选择【Resolve Hostnem】，按【Start】开始检测。</p></li></ul><p><img src="https://image.asa-world.cn/pic/image-20230702214943263.png" alt="所有端口扫描"></p><ol start="2"><li>扫描目标计算机的特定端口（自定义端口）<br>其实，大多数时候我们不需要检测所有端口，我们只要检测有限的几个端口就可以了，因为我们的目的只是为了得到目标计算机提供的服务和使用的软件。所以，我们可以根据个人目的的不同来检测不同的端口，大部分时候，我们只要检测80（web服务）、21（FTP服务）、23（Telnet服务）就可以了，即使是攻击，也不会有太多的端口检测。 点击【Port list setup】，出现端口设置界面（如下图）：</li></ol><p><img src="https://image.asa-world.cn/pic/image-20230702215016978.png" alt="端口选择"></p><p>我们选择21、23、80、三个端口，然后，点击【save】按钮保存选择的端口为端口列表。【ok】回到主界面。在【Scan Type】选择【All selected port in list】，按【Start】开始检测。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215040716.png" alt="扫描80端口"></p><h2 id="使用nmap6-35扫描">使用Nmap6.35扫描</h2><ul><li>隐蔽扫描(Stealth Scanning) TCP SYN scan命令：<code>nmap -sS IP_address</code></li><li>UDP 扫描(UDP Scanning)命令：<code>nmap -sU IP_address</code></li><li>扫描目标主机的操作系统类型命令：<code>nmap -sS -O IP_address</code></li><li>IPprotocol scan命令：<code>nmap -sO -v IP_address</code></li></ul><h1 id="实验结果及分析">实验结果及分析</h1><h2 id="使用ping和tracert命令">使用ping和tracert命令</h2><p>下图可以看到回环地址可以ping通，发送4个ping报文均收到了回应。应答报文长度均为32字节，应答时间均小于1ms，TTL都还有128。</p><p>TTL是IP数据包在计算机网络中可以转发的最大跳数。TTL字段由IP数据包的发送者设置，每经过一个路由器，路由器都会把该TTL的值减1，然后再将IP包转发出去。路由器将会丢弃收到的TTL=0的IP包。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214113327.png" alt="使用ping命令"></p><p>下图分析：-n参数表示ping报文的个数，windows中缺省值为4。图中改为2，即只发送两个ping报文，因此收到两个应答。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214125628.png" alt="使用ping -n命令"></p><p>下图分析：-t表示持续地ping直到人为中断，Ctrl+Break暂时中止ping命令并查看当前的统计结果，而Ctr+C则中断命令的执行。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214134782.png" alt="使用ping -t命令"></p><p>下图分析：-l表示设置ping报文所携带的数据部分的字节数，设置范围从0至65500。图中设置携带的数据有500字节，因为ping应答不会解析数据部分而是原样发送，因此接受到的应答报文中的数据部分也是500字节。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214146201.png" alt="使用ping -l命令"></p><p>下图分析：-a表示反向解析IP地址为主机名。图中可以看到将ping的目标主机解析成了主机名LAPTOP-5GC34HSA</p><p><img src="https://image.asa-world.cn/pic/image-20230702214156787.png" alt="使用ping -a命令"></p><p>下图分析：Tracert首先发送一个TTL为1的UDP报文；到达第一跳时TTL超时，第一跳设备发回一个ICMP错误消息，指明此数据包不能被发送；发送主机将TTL加1，重新发送此数据包；第二跳设备返回TTL超时报文。可以看到最终经过15个跃点到达了baidu.com的服务器（ip为39.156.66.10）。</p><p>显示信息每行包含编号、3次报文的响应时间和到达的设备IP地址。中间部分显示为“* * *”，说明该节点设备配置不允许tracert。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214206218.png" alt="使用Tracert命令"></p><p>下图分析：-h指定最大TTL，即搜索目标的最大跃点数。图中可以看出最多有5个跃点，最终未到达baidu.com的服务器。</p><p><img src="https://image.asa-world.cn/pic/image-20230702214214676.png" alt="使用Tracert -h命令"></p><h2 id="使用superscan进行扫描">使用Superscan进行扫描</h2><p>下图分析：通过输入本机电脑的IP，成功解析出了本机的名称LAPTOP-5GC34HSA。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215738559.png" alt="查找本机"></p><p>下图分析：通过ip扫描，找到了同一子网下的另一台主机，并解析出了该主机名称为LAPTOP-1VGKT20I。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215804365.png" alt="查找另一台主机"></p><p>下图分析：通过扫描所有在列表中选择的21、23、80号端口，扫描到该主机80号端口正在运行。80是http协议的默认端口。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215844235.png" alt="端口扫描"></p><h2 id="使用nmap6-35扫描">使用Nmap6.35扫描</h2><p>下图分析：使用多种命令都连不上主机，改了很久后，我在官网https://nmap.org/download#windows重新下载了最新版本nmap，就可以连接了。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215922594.png" alt="tcp扫描BUG"></p><p>下图分析：共扫描了101.43.74.203的1000个tcp端口，发现有995个被过滤的端口(没有响应)，2个关闭的端口，3个打开的端口，分别进行ssh、http、sun-answerbook服务。</p><p><img src="https://image.asa-world.cn/pic/image-20230702215951138.png" alt="tcp扫描"></p><p>下图分析：46分钟扫描了1000个端口均为忽略状态，无使用UDP的端口。</p><p><img src="https://image.asa-world.cn/pic/image-20230702220018108.png" alt="tcp扫描"></p><p>下图分析：可以看出推测设备类型为linux系统（版本不太确定），运行时间推测为21.9天，预测TCP序列号难度为260。</p><p><img src="https://image.asa-world.cn/pic/image-20230702220044437.png" alt="扫描主机操作系统"></p><p>下图分析：IP 协议扫描允许判断目标主机支持哪些 IP 协议，从结果可以看到共扫描了 256 个端口，发现被扫描主机支持1 种 IP 协议，即ICMP协议，其中只有端口1处于开启状态。</p><p><img src="https://image.asa-world.cn/pic/image-20230702220110414.png" alt="扫描主机操作系统"></p><h1 id="总结与反思">总结与反思</h1><ol><li>ping和tracert命令很早接触过了，但通常只是简单的加个IP地址，这次试了很多没用过的参数，有用又有趣。</li><li>对于Superscan软件，主要是对主机解析和端口扫描，感觉软件实现的原理不难，有时间我也可以写一个。</li><li>对于Nmap6.35，想吐槽的一点是慕课给的软件不能用，命令总是连接不上主机，网上的办法没用，问了助教好几次也未果，真的非常感谢助教耐心解答。最终实在没办法，就打算在官网上重下了一个最新版本，结果就真的可以了，当时差点哭出来呜呜呜，官网奉上，<a href="https://nmap.org/download#windows">https://nmap.org/download#windows</a></li><li>Nmap6.35的端口扫描不是很快，好像扫了40多分钟，也有可能扫的端口1000个太多了。Nmap6.35还可以推测操作系统、运行时间等，还蛮厉害的，虽然有点误差，但无可厚非。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目报告 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 课程实验 </tag>
+            
+            <tag> 网络安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>接入网实验：基于802.1X控制的LAN接入实验</title>
       <link href="/d25741a1/"/>
       <url>/d25741a1/</url>
@@ -20,9 +47,7 @@
       
         <tags>
             
-            <tag> 研究报告 </tag>
-            
-            <tag> 实验 </tag>
+            <tag> 课程实验 </tag>
             
             <tag> 接入网 </tag>
             
@@ -49,9 +74,7 @@
       
         <tags>
             
-            <tag> 研究报告 </tag>
-            
-            <tag> 实验 </tag>
+            <tag> 课程实验 </tag>
             
             <tag> 接入网 </tag>
             
