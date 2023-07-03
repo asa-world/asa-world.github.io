@@ -3367,6 +3367,17 @@ figure.gallery-group:hover .gallery-group-name::after {
 
 /* 文章页
 ---------------------------------------------------------------- */
+/*文章中的图片*/
+p.img-alt{
+	text-align: center!important;
+	margin: 0!important;
+	font-size: 14px;
+    color: var(--asa-secondtext);
+}
+#article-container > p> a > img{
+	margin-bottom: 0.2em;
+}
+
 /*列表符号样式*/
 #article-container.post-content li::marker {
     color: var(--asa-main);

@@ -91,10 +91,21 @@ if(type == 'article'){
 
 	document.querySelector("#post-cover").classList.remove("loading");
 	document.querySelector("#post-cover").classList.add("loaded");
+	
 	/*自动摘要适配*/
 	document.documentElement.style.setProperty('--heo-lighttext',color);
 	document.documentElement.style.setProperty('--heo-main',color);
 	document.querySelector("#tianliGPT-tag").innerHTML = 'AsaGPT';
+	
+	/*图片加标题*/
+	var imglist = document.querySelectorAll("p > img");
+	var i;
+	for(i=0; i<imglist.length; i++){
+		let title = document.createElement('p');
+		title.classList.add("img-alt")
+		title.innerHTML = imglist[i].getAttribute('alt');
+		imglist[i].parentNode.insertBefore(title, imglist[i].nextSibling);
+	}
 }
 
 /*判断国外ip
@@ -232,18 +243,6 @@ if(window.location.href == "http://localhost:4000/categories/"||window.location.
   }
 
  }
-  /**/
-  var category_lists = document.querySelectorAll("#blog_name > div > div > div> span > div > ul > li");
-  var i;
-  var create_li = document.querySelector("#blog_name > div > div > div> span > div.is-center.tag-cloud-list")
-  for(i=0 ; i<category_lists.length ; i++){
-	 let a0 = document.createElement('a');
-	 a0.innerHTML = '<span class="tags-punctuation">#</span><p style="display: inline-block; margin: auto;">haha</p><span class="tagsPageCount">num</span>';
-     a0.href = category_lists[i].childNodes[0].href;
-	 a0.childNodes[1].innerHTML = category_lists[i].childNodes[0].innerHTML;
-	 a0.childNodes[2].innerHTML = category_lists[i].childNodes[1].innerHTML;	 
-	 create_li.insertAdjacentElement('beforeend',a0);  
-  }
 
 
 
