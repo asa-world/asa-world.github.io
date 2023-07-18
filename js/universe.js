@@ -419,8 +419,8 @@ function randomstar(){
 	var num = document.querySelector(".wordnum");//获取指定元素
 	var mains = document.querySelector("#main-star");//获取指定元素
 	var i;
-	console.log(mains.getBoundingClientRect().top);
-	console.log(mains.getBoundingClientRect().bottom);
+	//console.log(mains.getBoundingClientRect().top);
+	//console.log(mains.getBoundingClientRect().bottom);
 	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
