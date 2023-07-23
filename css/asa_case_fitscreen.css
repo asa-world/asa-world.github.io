@@ -61,6 +61,12 @@
 	  padding-bottom: 10px;
 	  padding-top: 8px;
   }
+   #foot_b, #jing-img {
+    float: none;
+   }
+   #footer-wrap {
+    font-weight: normal;
+   }
   
   /*分类页适配*/
   #page > div.category-lists > div.is-center.tag-cloud-list > a{
