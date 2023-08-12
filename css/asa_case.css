@@ -3388,6 +3388,11 @@ p.img-alt{
 	font-size: 1.3em;
 }
 
+#article-container.post-content ul li ul li::marker {
+    content:"○ ";
+	font-size: 1em;
+}
+
 /*顶部信息样式*/
 .meta-firstline>span {
 	display: inline-block;
