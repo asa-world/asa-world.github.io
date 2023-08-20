@@ -403,7 +403,7 @@ if(window.location.href == "http://localhost:4000/sawords/"||window.location.hre
 
 //移动端（不）适配
 function nopei(){
-	document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/1675597149902.png)";
+	document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/Snipaste_2023-08-13_10-44-39.jpg)";
 	document.querySelector("body").style.backgroundSize = "cover";
 	document.querySelector("#content-inner").style.display = "none";
 	document.querySelector("#footer").style.display = "none";
