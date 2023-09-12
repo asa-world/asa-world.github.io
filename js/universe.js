@@ -232,7 +232,7 @@ if(window.location.href == "http://localhost:4000/categories/"||window.location.
   document.querySelector("#page > div.category-lists > div.category-title.is-center").innerHTML = '专栏';
   var category_lists = document.querySelectorAll("#page > div.category-lists > ul > li");
   var i;
-  var create_li = document.querySelector("#page > div.category-lists > div.is-center.tag-cloud-list")
+  var create_li = document.querySelector("#page > div.category-lists > div.is-center.tag-cloud-list");
   for(i=0 ; i<category_lists.length ; i++){
 	 let a0 = document.createElement('a');
 	 a0.innerHTML = '<span class="tags-punctuation">#</span><p style="display: inline-block; margin: auto;">haha</p><span class="tagsPageCount">num</span>';
@@ -241,10 +241,7 @@ if(window.location.href == "http://localhost:4000/categories/"||window.location.
 	 a0.childNodes[2].innerHTML = category_lists[i].childNodes[1].innerHTML;	 
 	 create_li.insertAdjacentElement('beforeend',a0);  
   }
-
- }
-
-
+}
 
 if(window.location.href == "http://localhost:4000/archives/"||window.location.href == "https://asa-world.github.io/archives/"||window.location.href == "https://asa-world.cn/archives/"||window.location.href == "http://asa-world.cn/archives/"){
   document.querySelector("#site-title").style.display = 'none';

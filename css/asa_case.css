@@ -953,6 +953,17 @@ span.bubble-content {
 	object-fit: cover;
 }
 
+#blog_name > div > div > div:nth-child(1) > div.back-menu-list > div > ul > li{
+	width: fit-content;
+	background: none;
+	margin-left:20px;
+	margin-right:10px;
+}
+
+
+#blog_name>div>div>div:nth-child(1)>div.back-menu-list>div>ul>li:hover{
+	background: var(--asa-theme)!important;
+}
 
 #search-button > a > i{
 	font-size: 1em;
