@@ -553,7 +553,7 @@ function randomstar(){
 
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
-
+	}
 	
 	
 	//g[s.length-1].style.top = "0px";
