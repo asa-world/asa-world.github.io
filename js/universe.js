@@ -206,7 +206,14 @@ self.setInterval("getScrollTop()",500);
 
 /*看星星页的bgm*/
 if(window.location.href == "http://localhost:4000/star/"||window.location.href == "https://asa-world.github.io/star/"||window.location.href == "https://asa-world.cn/star/"||window.location.href == "http://asa-world.cn/star/"){
-    dark();
+    	if (isMobileDevice()) {
+		nopei();
+	} else {
+		dark();
+	}
+	
+	
+	
 	/*
 	//const image = document.createElement('img');
 	//image.src  = 'https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/Lighthouse-ys.jpg';
@@ -390,17 +397,11 @@ for (i = 0; i < s.length; i++) {
 
 //星语页
 if(window.location.href == "http://localhost:4000/sawords/"||window.location.href == "https://asa-world.github.io/sawords/"||window.location.href == "https://asa-world.cn/sawords/"||window.location.href == "http://asa-world.cn/sawords/"){
-	//if(window.screen.width<768){
-	//	nopei();
-	//}
-	//else{
-	//	randomstar();
-	//}
+
 	if (isMobileDevice()) {
-	console.log("当前设备是移动设备。");
-	nopei();
+		nopei();
 	} else {
-	  console.log("当前设备是桌面设备。");
+		randomstar();
 	}
 	
 }
@@ -489,7 +490,7 @@ function nopei() {
 
 
 function isMobileDevice() {
-  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||window.screen.width<768;
 }
 
 
