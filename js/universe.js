@@ -390,16 +390,23 @@ for (i = 0; i < s.length; i++) {
 
 //星语页
 if(window.location.href == "http://localhost:4000/sawords/"||window.location.href == "https://asa-world.github.io/sawords/"||window.location.href == "https://asa-world.cn/sawords/"||window.location.href == "http://asa-world.cn/sawords/"){
-	if(window.screen.width<768){
-		nopei();
+	//if(window.screen.width<768){
+	//	nopei();
+	//}
+	//else{
+	//	randomstar();
+	//}
+	if (isMobileDevice()) {
+	console.log("当前设备是移动设备。");
+	nopei();
+	} else {
+	  console.log("当前设备是桌面设备。");
 	}
-	else{
-		randomstar();
-	}
+	
 }
 
 //移动端（不）适配
-function nopei(){
+//function nopei(){
 	//document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/Snipaste_2023-08-13_10-44-39.jpg)";
 	//document.querySelector("body").style.backgroundSize = "cover";
 	//document.querySelector("#content-inner").style.display = "none";
@@ -408,13 +415,13 @@ function nopei(){
   
 
   // Insert animated element
-	insertAnimatedElement();
-	btf.snackbarShow('本页仅适配电脑端');
+	//insertAnimatedElement();
+	//btf.snackbarShow('本页仅适配电脑端');
 	
-}
+//}
 
-//插入动态的❌
-function insertAnimatedElement() {
+//移动端（不）适配,插入动态的❌
+function nopei() {
   // Insert the HTML structure
   var div = document.getElementById('content-inner');
   div.innerHTML = `
@@ -423,9 +430,7 @@ function insertAnimatedElement() {
       <path d="M300,320 L540,320" id="middle"></path>
       <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
     </svg>
-	
-	
-	</div><div><b>本页仅适配电脑端，点击左上角返回首页。</b></div>
+	</div><div style="text-align: center;"><b>本页仅适配电脑端，点击左上角返回首页</b></div>
   `;
 
 
@@ -481,6 +486,12 @@ function insertAnimatedElement() {
   }, 1500);
 
 }
+
+
+function isMobileDevice() {
+  return /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 
 
 //随机生成星球
