@@ -424,8 +424,8 @@ function insertAnimatedElement() {
       <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
     </svg>
 	
-	<b>本页仅适配电脑端，点击左上角返回首页。</b>
-	</div>
+	
+	</div><div><b>本页仅适配电脑端，点击左上角返回首页。</b></div>
   `;
 
 
