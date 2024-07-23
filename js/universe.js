@@ -418,11 +418,14 @@ function insertAnimatedElement() {
   // Insert the HTML structure
   var div = document.getElementById('content-inner');
   div.innerHTML = `
-    <div><svg id="icon" viewBox="0 0 800 600">
+    <div class="bupei"><svg id="icon" viewBox="0 0 800 600">
       <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
       <path d="M300,320 L540,320" id="middle"></path>
       <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-    </svg></div>
+    </svg>
+	
+	<b>本页仅适配电脑端，点击左上角返回首页。</b>
+	</div>
   `;
 
 
@@ -430,6 +433,12 @@ function insertAnimatedElement() {
   var style = document.createElement('style');
   style.innerHTML = `
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+	
+	.bupei{
+		margin-top: 10em;
+		text-align: center;
+	}
+
 
     #icon {
       width: 200px;
@@ -443,7 +452,7 @@ function insertAnimatedElement() {
       transition: stroke-dashoffset 0.5s cubic-bezier(0.250, -0.250, 0.750, 1.250), stroke-dasharray 0.5s cubic-bezier(0.250, -0.250, 0.750, 1.250);
       stroke-width: 40px;
       stroke-linecap: round;
-      stroke: #A06BA5;
+      stroke: red;
       stroke-dashoffset: 0px;
     }
 
