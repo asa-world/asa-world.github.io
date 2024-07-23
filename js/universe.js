@@ -93,9 +93,9 @@ if(type == 'article'){
 	document.querySelector("#post-cover").classList.add("loaded");
 	
 	/*自动摘要适配*/
-	document.documentElement.style.setProperty('--heo-lighttext',color);
-	document.documentElement.style.setProperty('--heo-main',color);
-	document.querySelector("#tianliGPT-tag").innerHTML = 'AsaGPT';
+	//document.documentElement.style.setProperty('--heo-lighttext',color);
+	//document.documentElement.style.setProperty('--heo-main',color);
+	//document.querySelector("#tianliGPT-tag").innerHTML = 'AsaGPT';
 	
 	/*图片加标题*/
 	var imglist = document.querySelectorAll("p > img");

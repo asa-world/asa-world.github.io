@@ -39,10 +39,10 @@ Twikoo评论框背景图实现点击下移
     content: '输入QQ号会自动获取昵称和头像';
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
-    content: '收到回复将会发送到你的邮箱';
+    content: '收到博主回复将给您发送邮件';
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
-    content: '可以通过昵称访问你的网站';
+    content: '允许博主访问您的个人网站';
 }
 .el-input.el-input--small.el-input-group.el-input-group--prepend::before {
     display: none;
