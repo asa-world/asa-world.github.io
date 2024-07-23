@@ -404,9 +404,11 @@ function nopei(){
 	//document.querySelector("body").style.backgroundSize = "cover";
 	//document.querySelector("#content-inner").style.display = "none";
 	//document.querySelector("#footer").style.display = "none";
-	
-	// Insert animated element
-	insertAnimatedElement();
+	//var contentInner = document.getElementById('content-inner');
+  
+
+  // Insert animated element
+	//insertAnimatedElement();
 	btf.snackbarShow('本页仅适配电脑端');
 	
 }
@@ -422,11 +424,7 @@ function insertAnimatedElement() {
       <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
     </svg>
   `;
-  	// Clear all child elements
-	while (contentInner.firstChild) {
-	contentInner.removeChild(contentInner.firstChild);
-	}
-	contentInner.appendChild(div);
+
 
   // Add styles
   var style = document.createElement('style');

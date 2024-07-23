@@ -701,13 +701,6 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2024-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://asa-world.cn/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -722,6 +715,13 @@
   </url>
   
   <url>
+    <loc>https://asa-world.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <lastmod>2024-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://asa-world.cn/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -730,20 +730,6 @@
   
   <url>
     <loc>https://asa-world.cn/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2024-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://asa-world.cn/tags/%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2024-07-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://asa-world.cn/tags/Apple/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -778,6 +764,20 @@
   </url>
   
   <url>
+    <loc>https://asa-world.cn/tags/Apple/</loc>
+    <lastmod>2024-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://asa-world.cn/tags/%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2024-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://asa-world.cn/tags/%E6%9C%BA%E5%99%A8%E8%A7%86%E8%A7%89/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -806,14 +806,14 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <loc>https://asa-world.cn/tags/%E7%94%9F%E6%B4%BB%E5%90%91/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://asa-world.cn/tags/%E7%94%9F%E6%B4%BB%E5%90%91/</loc>
+    <loc>https://asa-world.cn/tags/%E5%93%B2%E5%AD%A6/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -864,14 +864,14 @@
   </url>
   
   <url>
-    <loc>https://asa-world.cn/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/</loc>
+    <loc>https://asa-world.cn/categories/%E6%9C%AC%E7%A7%91%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://asa-world.cn/categories/%E6%9C%AC%E7%A7%91%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://asa-world.cn/categories/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2024-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
