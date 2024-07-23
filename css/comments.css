@@ -3,7 +3,7 @@
     min-height: 180px !important;
 }
   
-/* Twikoo评论框添加背景图*/
+/* Twikoo评论框添加背景图
 .el-textarea {
 	background-image: url(https://cdn.jsdelivr.net/gh/asa-pic/pic_1/img/vsgif_com__.2574996.gif);
 	background-size: contain;
@@ -13,11 +13,11 @@
 	resize: vertical
 }
 
-/* Twikoo评论框背景图实现点击下移*/
+Twikoo评论框背景图实现点击下移
 .el-textarea:focus-within {
 	background-position-y: 800px;
 	transition: all 0.2s ease-in-out 0s;
-}
+}*/
 
 /* Twikoo评论输入框设置*/
 .tk-meta-input{
