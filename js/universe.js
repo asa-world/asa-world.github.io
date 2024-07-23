@@ -401,7 +401,13 @@ if(window.location.href == "http://localhost:4000/sawords/"||window.location.hre
 	if (isMobileDevice()) {
 		nopei();
 	} else {
+
+		//console.log('当前页面的高度为:', pageHeight, 'px');
+		
 		randomstar();
+		
+		// Add hover effect
+		
 	}
 	
 }
@@ -495,6 +501,8 @@ function isMobileDevice() {
 
 
 
+
+
 //随机生成星球
 function randomstar(){
 	var g = document.querySelectorAll(".sagroups");//获取指定元素
@@ -502,11 +510,24 @@ function randomstar(){
 	var num = document.querySelector(".wordnum");//获取指定元素
 	var mains = document.querySelector("#main-star");//获取指定元素
 	var i;
+	// 获取 main-star 元素的边界
+	//const mainStarRect = mains.getBoundingClientRect();
 	//console.log(mains.getBoundingClientRect().top);
 	//console.log(mains.getBoundingClientRect().bottom);
+	// 获取页面总高度
+	const pageHeight = Math.max(
+	  document.body.scrollHeight,
+	  document.documentElement.scrollHeight,
+	  document.body.offsetHeight,
+	  document.documentElement.offsetHeight,
+	  document.body.clientHeight,
+	  document.documentElement.clientHeight
+	);
+
 	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
+		/*
 		if(i<s.length/4){
 			var top = randomNum(-1000,-700);
 			var left = randomNum(1,99);
@@ -518,22 +539,60 @@ function randomstar(){
 		if(i>s.length/2){
 			var top = randomNum(-400,0);
 			var left = randomNum(1,99);
-		}
+		}*/
+		//console.log(mainStarRect.top);
+		//console.log(mainStarRect.left);
+		var top = randomNum(-pageHeight/2,pageHeight/2);
+		var left = randomNum(1,99);
 		var size = randomNum(10,80)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
 
-		g[i].style.top = top + "px";
-		g[i].style.left =  left + "%";
 		s[i].style.setProperty('--star-size',size+"em");
 		s[i].style.setProperty('--star-shadow-size',(size/2)+"em");
 		s[i].style.setProperty('--animation-delay',bling_dely+"s");
-	}
+
+		g[i].style.top = top + "px";
+		g[i].style.left =  left + "%";
+
 	
 	
-	g[s.length-1].style.top = "0px";
+	//g[s.length-1].style.top = "0px";
 	//console.log(g[s.length-1].getBoundingClientRect().top);
 }
 
+
+function addHoverEffect(hoverElement, targetElement) {
+	if(parseFloat(hoverElement.style.left)<60){
+		hoverElement.addEventListener('mouseenter', function() {
+		targetElement.style.visibility = 'visible';
+		targetElement.style.opacity = '0.8';
+		targetElement.style.transform = 'translateX(10px)';
+		targetElement.style.zIndex = '3';
+		});
+		hoverElement.addEventListener('mouseleave', function() {
+			targetElement.style.visibility = 'hidden';
+			targetElement.style.opacity = '0';
+			targetElement.style.transform = 'translateX(0)';
+			targetElement.style.zIndex = '0';
+		});
+	}else{
+		let len = -(targetElement.clientWidth+10);
+		hoverElement.addEventListener('mouseenter', function() {
+		targetElement.style.visibility = 'visible';
+		targetElement.style.opacity = '0.8';
+		targetElement.style.transform = 'translateX(${len}px)';
+		targetElement.style.zIndex = '3';
+		});
+		hoverElement.addEventListener('mouseleave', function() {
+			targetElement.style.visibility = 'hidden';
+			targetElement.style.opacity = '0';
+			targetElement.style.transform = 'translateX(0)';
+			targetElement.style.zIndex = '0';
+		});
+		
+	}
+	
+}
 
 //随机生成
 function randomNum(minNum,maxNum){ 

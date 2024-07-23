@@ -4088,6 +4088,7 @@ div#author-info__sayhi {
 	left: 51%;
 	top: 400px;
 	filter: blur(40px);
+	z-index: 1;
 }
 .halo div{
 	width:900px;
@@ -4194,7 +4195,7 @@ div#author-info__sayhi {
 
 .minstar:hover~.words{
 	animation:show 1s forwards;
-	z-index: 1;
+	z-index: 3;
 }
 
 .sagroups{
@@ -4250,6 +4251,7 @@ div#author-info__sayhi {
     float: right;
     margin-right:calc((100% - 1190px) / 2);
     bottom: 16em;
+	z-index: 2;
 }
 .thetitle{
 	color:#97bef2;
@@ -4307,7 +4309,6 @@ div#author-info__sayhi {
 		opacity:0.8;
 		transform:translateX(10px);
 	}
-
 }
 
 @keyframes perspective-hover{
