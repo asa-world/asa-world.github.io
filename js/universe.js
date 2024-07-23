@@ -408,7 +408,7 @@ function nopei(){
   
 
   // Insert animated element
-	//insertAnimatedElement();
+	insertAnimatedElement();
 	btf.snackbarShow('本页仅适配电脑端');
 	
 }
@@ -418,11 +418,11 @@ function insertAnimatedElement() {
   // Insert the HTML structure
   var div = document.getElementById('content-inner');
   div.innerHTML = `
-    <svg id="icon" viewBox="0 0 800 600">
+    <div><svg id="icon" viewBox="0 0 800 600">
       <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
       <path d="M300,320 L540,320" id="middle"></path>
       <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-    </svg>
+    </svg></div>
   `;
 
 
@@ -430,15 +430,6 @@ function insertAnimatedElement() {
   var style = document.createElement('style');
   style.innerHTML = `
     @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
-
-    body, html, div {
-      background: #292A38;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-    }
 
     #icon {
       width: 200px;
@@ -480,18 +471,6 @@ function insertAnimatedElement() {
     div.classList.toggle('cross');
   }, 1500);
 
-  div.addEventListener('click', function() {
-    clearInterval(i);
-    div.classList.toggle('cross');
-  });
-
-  // Resize function
-  var resize = function() {
-    document.body.style.marginTop = Math.floor((window.innerHeight - 150) / 2) + 'px';
-  };
-
-  window.addEventListener('resize', resize);
-  resize();
 }
 
 
