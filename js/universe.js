@@ -400,12 +400,101 @@ if(window.location.href == "http://localhost:4000/sawords/"||window.location.hre
 
 //移动端（不）适配
 function nopei(){
-	document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/Snipaste_2023-08-13_10-44-39.jpg)";
-	document.querySelector("body").style.backgroundSize = "cover";
-	document.querySelector("#content-inner").style.display = "none";
-	document.querySelector("#footer").style.display = "none";
+	//document.querySelector("body").style.backgroundImage = "url(https://image.asa-world.cn/pic/Snipaste_2023-08-13_10-44-39.jpg)";
+	//document.querySelector("body").style.backgroundSize = "cover";
+	//document.querySelector("#content-inner").style.display = "none";
+	//document.querySelector("#footer").style.display = "none";
+	var contentInner = document.getElementById('content-inner');
+  
+	// Clear all child elements
+	while (contentInner.firstChild) {
+	contentInner.removeChild(contentInner.firstChild);
+	}
+  // Insert animated element
+	insertAnimatedElement();
 	btf.snackbarShow('本页仅适配电脑端');
 	
+}
+
+//插入动态的❌
+function insertAnimatedElement() {
+  // Insert the HTML structure
+  var div = document.createElement('div');
+  div.innerHTML = `
+    <svg id="icon" viewBox="0 0 800 600">
+      <path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
+      <path d="M300,320 L540,320" id="middle"></path>
+      <path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
+    </svg>
+  `;
+  document.body.appendChild(div);
+
+  // Add styles
+  var style = document.createElement('style');
+  style.innerHTML = `
+    @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+
+    body, html, div {
+      background: #292A38;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    #icon {
+      width: 200px;
+      height: 150px;
+      cursor: pointer;
+      transform: translate3d(0,0,0);
+    }
+
+    path {
+      fill: none;
+      transition: stroke-dashoffset 0.5s cubic-bezier(0.250, -0.250, 0.750, 1.250), stroke-dasharray 0.5s cubic-bezier(0.250, -0.250, 0.750, 1.250);
+      stroke-width: 40px;
+      stroke-linecap: round;
+      stroke: #A06BA5;
+      stroke-dashoffset: 0px;
+    }
+
+    path#top, path#bottom {
+      stroke-dasharray: 240px 950px;
+    }
+
+    path#middle {
+      stroke-dasharray: 240px 240px;
+    }
+
+    .cross path#top, .cross path#bottom {
+      stroke-dashoffset: -650px;
+    }
+
+    .cross path#middle {
+      stroke-dashoffset: -115px;
+      stroke-dasharray: 1px 220px;
+    }
+  `;
+  document.head.appendChild(style);
+
+  // Add JavaScript for the animation behavior
+  var i = setInterval(function() {
+    div.classList.toggle('cross');
+  }, 1500);
+
+  div.addEventListener('click', function() {
+    clearInterval(i);
+    div.classList.toggle('cross');
+  });
+
+  // Resize function
+  var resize = function() {
+    document.body.style.marginTop = Math.floor((window.innerHeight - 150) / 2) + 'px';
+  };
+
+  window.addEventListener('resize', resize);
+  resize();
 }
 
 
