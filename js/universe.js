@@ -515,21 +515,20 @@ function randomstar(){
 	//console.log(mains.getBoundingClientRect().top);
 	//console.log(mains.getBoundingClientRect().bottom);
 	// 获取页面总高度
-	const pageHeight = Math.max(
-	  document.body.scrollHeight,
-	  document.documentElement.scrollHeight,
-	  document.body.offsetHeight,
-	  document.documentElement.offsetHeight,
-	  document.body.clientHeight,
-	  document.documentElement.clientHeight
-	);
-
+	const Height = 2*(Math.max(
+	  document.body.scrollHeight
+	  //document.documentElement.scrollHeight,
+	  //document.body.offsetHeight,
+	  //document.documentElement.offsetHeight,
+	  //document.body.clientHeight,
+	  //document.documentElement.clientHeight
+	))/10;
 	var w = document.body.clientWidth;
 	num.id= s.length + "颗";
 	for (i = 0; i < s.length; i++) {
 		/*
 		if(i<s.length/4){
-			var top = randomNum(-1000,-700);
+			var top = randomNum(-pageHeight/2,0);
 			var left = randomNum(1,99);
 		}
 		if(i>s.length/4 && i<s.length/2){
@@ -542,7 +541,7 @@ function randomstar(){
 		}*/
 		//console.log(mainStarRect.top);
 		//console.log(mainStarRect.left);
-		var top = randomNum(-pageHeight/2,pageHeight/2);
+		var top = randomNum(-Height,Height/5);
 		var left = randomNum(1,99);
 		var size = randomNum(10,80)/100*2.2;
 		var bling_dely = randomNum(0,s.length);
@@ -553,6 +552,10 @@ function randomstar(){
 
 		g[i].style.top = top + "px";
 		g[i].style.left =  left + "%";
+		if(left>60){
+			g[i].className = 'sagroupL';
+			s[i].className = 'minstarL';
+		}
 	}
 	
 	

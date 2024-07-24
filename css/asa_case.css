@@ -3629,7 +3629,7 @@ p.img-alt{
 [data-theme="dark"]
   #post .post-copyright {
     background-color: var(--asa-card-bg);
-    //text-shadow: #bfbeb8 1px 0 4px;
+    
   }
 [data-theme="dark"]
   #post .post-copyright {
@@ -4172,7 +4172,7 @@ div#author-info__sayhi {
 	box-shadow: 0 0 3rem 1.5rem var(--star-shadow-out), inset 0 0 2rem 0 var(--star-shadow-out);
 }
 
-.minstar{
+.minstar,.minstarL{
     --color: rgba(14,52,102,1);
 	--animation-duration: 3s;
     --animation-delay: 0s;
@@ -4186,11 +4186,11 @@ div#author-info__sayhi {
 	animation: stars var(--animation-duration) var(--animation-jump-both) var(--animation-delay) infinite;
 	transition: .7s;
 }
-.minstar:hover{
+.minstar:hover,.minstarL:hover{
 	transform: scale(1.5);
 	transition: .7s;
 	cursor: pointer;
-	z-index: 2;
+	z-index: 4;
 }
 
 .minstar:hover~.words{
@@ -4198,14 +4198,25 @@ div#author-info__sayhi {
 	z-index: 3;
 }
 
-.sagroups{
+.sagroups,.sagroupL{
 	position: relative;
+  width: max-content;
+  display: flex;
 }
+
+.sagroupL{
+  flex-direction: row-reverse
+}
+.minstarL:hover~.words{
+	animation: showL 1s forwards;
+	z-index: 3;
+}
+
 .words{
 	color: hsl(214deg 77% 77%);
     opacity: .8;
     padding: 0.5rem;
-    position: absolute;
+    position: relative;
     transform: translate(10px,-50%);
     border-radius: .5rem;
     background: rgb(255 255 255 / 5%);
@@ -4222,7 +4233,7 @@ div#author-info__sayhi {
 	position: absolute;
     margin-top: -50em;
     margin-left: 7em;
-    grid-area: 1 / 1 / 
+    grid-area: 1 / 1  
 }
 .welcome-word .greets {
 	display: block;
@@ -4308,6 +4319,18 @@ div#author-info__sayhi {
 		visibility:visible;
 		opacity:0.8;
 		transform:translateX(10px);
+	}
+}
+@keyframes showL{
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(30px);
+  }
+	to{
+		visibility:visible;
+		opacity:0.8;
+		transform:translateX(-10px);
 	}
 }
 
