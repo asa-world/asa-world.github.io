@@ -54,7 +54,7 @@
     
     
     <entry>
-      <title>蜻蜓点水 —— 多模态机器学习领域综述</title>
+      <title>多模态机器学习领域综述</title>
       <link href="/3ba19617/"/>
       <url>/3ba19617/</url>
       
@@ -81,7 +81,7 @@
     
     
     <entry>
-      <title>蜻蜓点水 —— 大语言模型综述</title>
+      <title>大语言模型综述</title>
       <link href="/8f385bd4/"/>
       <url>/8f385bd4/</url>
       
@@ -108,7 +108,7 @@
     
     
     <entry>
-      <title>蜻蜓点水 —— 小样本学习领域综述</title>
+      <title>小样本学习领域综述</title>
       <link href="/4a47da24/"/>
       <url>/4a47da24/</url>
       
@@ -135,7 +135,7 @@
     
     
     <entry>
-      <title>狠狠学系列 —— 《网络算法基础》各章知识点总结</title>
+      <title>《网络算法基础》各章知识点总结</title>
       <link href="/20b964c/"/>
       <url>/20b964c/</url>
       
@@ -162,7 +162,7 @@
     
     
     <entry>
-      <title>狠狠学系列 —— 《信号与系统》各章知识点总结</title>
+      <title>《信号与系统》各章知识点总结</title>
       <link href="/5e397d46/"/>
       <url>/5e397d46/</url>
       
@@ -187,7 +187,7 @@
     
     
     <entry>
-      <title>狠狠学系列 ——《数据结构与算法》《人工智能基础》复习</title>
+      <title>《数据结构与算法》《人工智能基础》复习</title>
       <link href="/d10274ff/"/>
       <url>/d10274ff/</url>
       
@@ -212,7 +212,7 @@
     
     
     <entry>
-      <title>狠狠学系列 —— 《计算机通信网》各章知识点总结</title>
+      <title>《计算机通信网》各章知识点总结</title>
       <link href="/815dfc21/"/>
       <url>/815dfc21/</url>
       
@@ -237,7 +237,7 @@
     
     
     <entry>
-      <title>狠狠学系列 ——《线性代数》《概率论》复习</title>
+      <title>《线性代数》《概率论》复习</title>
       <link href="/c23efd5b/"/>
       <url>/c23efd5b/</url>
       
@@ -262,7 +262,7 @@
     
     
     <entry>
-      <title>狠狠学系列——《高等数学》各章知识点总结</title>
+      <title>《高等数学》各章知识点总结</title>
       <link href="/d8c11510/"/>
       <url>/d8c11510/</url>
       
@@ -384,9 +384,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> 计算机网络 </tag>
+            
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -411,9 +411,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> 计算机网络 </tag>
+            
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -519,9 +519,9 @@
       
         <tags>
             
-            <tag> 后端 </tag>
-            
             <tag> 数据库 </tag>
+            
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -557,7 +557,7 @@
     
     
     <entry>
-      <title>向思想的巨人学习，毛泽东思想概论体系重点总结</title>
+      <title>毛泽东思想概论体系重点总结</title>
       <link href="/872fcfac/"/>
       <url>/872fcfac/</url>
       
@@ -601,31 +601,6 @@
             <tag> 英语 </tag>
             
             <tag> C语言 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>我宣布个事，利用概率密度函数奇偶性速求分布函数</title>
-      <link href="/b599e018/"/>
-      <url>/b599e018/</url>
-      
-        <content type="html"><![CDATA[<p><em>做到随机信号的一道题，发现有一个很意思的解法，就是使用PDF的一个性质</em></p><h2 id="pdf性质">PDF性质</h2><p>若概率密度函数是偶函数，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">F(x)+F(-x) = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>。</p><h2 id="证明">证明</h2><p>没有搜到性质的证明，所以我来自己证明下。</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mo>∵</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext>为偶函数</mtext><mspace linebreak="newline"></mspace><mo>∴</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mspace linebreak="newline"></mspace><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>+</mo><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi><mo>+</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mrow><mo>−</mo><mi>x</mi></mrow></msubsup><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi><mo>+</mo><msubsup><mo>∫</mo><mi>x</mi><mi mathvariant="normal">∞</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi mathvariant="normal">∞</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mn>1</mn></mrow></mstyle></mtd></mtr></mtable></mrow><annotation encoding="application/x-tex">\because f(x)为偶函数 \\\therefore f(x) = f(-x)\\\begin{split} F(x)+F(-x) &amp;= \int_{-\infty}^{x}f(x)dx+\int_{-\infty}^{-x}f(-x)d(-x)\\ &amp;= \int_{-\infty}^xf(x)dx+\int_x^{\infty}f(-x)dx\\ &amp;= \int_{-\infty}^{\infty}f(x)dx\\ &amp; = 1 \end{split}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6922em;"></span><span class="mrel amsrm">∵</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord cjk_fallback">为偶函数</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:0.6922em;"></span><span class="mrel amsrm">∴</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:9.6607em;vertical-align:-4.5803em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.0803em;"><span style="top:-7.0803em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-4.3958em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"></span></span><span style="top:-1.7112em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"></span></span><span style="top:0.3991em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:4.5803em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:5.0803em;"><span style="top:-7.0803em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.5212em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-4.3958em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-1.7112em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:0.3991em;"><span class="pstrut" style="height:3.5212em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:4.5803em;"><span></span></span></span></span></span></span></span></span></span></span></span></p><h2 id="应用">应用</h2><blockquote><p>设随机变量X的概率密度函数为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mo>−</mo><mrow><mo fence="true">∣</mo><mi>x</mi><mo fence="true">∣</mo></mrow></mrow></msup></mrow><annotation encoding="application/x-tex">f(x) = e^{-\left | x \right | }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.888em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.888em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="minner mtight"><span class="mopen mtight delimcenter" style="top:0em;"><span class="mtight">∣</span></span><span class="mord mathnormal mtight">x</span><span class="mclose mtight delimcenter" style="top:0em;"><span class="mtight">∣</span></span></span></span></span></span></span></span></span></span></span></span></span></span>，求其分布函数。</p></blockquote><p>答：当<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x&lt;0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>时，</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mi>d</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msubsup><mo>∫</mo><mrow><mo>−</mo><mi mathvariant="normal">∞</mi></mrow><mi>x</mi></msubsup><msup><mi>e</mi><mi>x</mi></msup><mi>d</mi><mi>x</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><msup><mi>e</mi><mi>x</mi></msup></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{split}F(x) &amp;= \int_{-\infty}^xf(x)dx\\&amp;= \int_{-\infty}^xe^xdx\\&amp;=e^x\end{split}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:6.8691em;vertical-align:-3.1846em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.6846em;"><span style="top:-5.6846em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"></span></span><span style="top:-0.8897em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:3.1846em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:3.6846em;"><span style="top:-5.6846em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.44445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">∞</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9703em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-0.8897em;"><span class="pstrut" style="height:3.4143em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7144em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:3.1846em;"><span></span></span></span></span></span></span></span></span></span></span></span></p><p>当<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x&gt;0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>时，则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>−</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-x&lt;0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>，因为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext>为</mtext></mrow><annotation encoding="application/x-tex">f(x)为</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mord cjk_fallback">为</span></span></span></span>偶函数，因此可得：</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right left" columnspacing="0em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mn>1</mn><mo>−</mo><mi>F</mi><mo stretchy="false">(</mo><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>=</mo><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{split}F(x) &amp;= 1-F(-x)\\&amp;= 1- e^{-x}\\\end{split}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3em;vertical-align:-1.25em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8213em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span></span></span></span></span></span></p><p>因为分布函数为右连续，因此得到：</p><p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.16em" columnalign="center center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><msup><mi>e</mi><mi>x</mi></msup><mo separator="true">,</mo><mi>x</mi><mo>&lt;</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mn>1</mn><mo>−</mo><msup><mi>e</mi><mrow><mo>−</mo><mi>x</mi></mrow></msup><mo separator="true">,</mo><mi>x</mi><mo>≥</mo><mn>0</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">f(x)=\left\{\begin{matrix}  &amp;e^x,x&lt;0\\  &amp;1-e^{-x},x\ge0\end{matrix}\right.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.45em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:2.84em;"></span><span class="mord"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6644em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7713em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mathnormal mtight">x</span></span></span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.95em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 原创干货 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 数学 </tag>
             
         </tags>
       
@@ -773,60 +748,6 @@
     
     
     <entry>
-      <title>vercel部署twikoo的访问问题，vercel的默认域名时不时被墙</title>
-      <link href="/5f3bb65c/"/>
-      <url>/5f3bb65c/</url>
-      
-        <content type="html"><![CDATA[<h2 id="bug">BUG</h2><p>腾讯云开发弃坑后转为vercel + MongoDB部署twikoo。部署好后原以为万事大吉，没想到今天有朋友访问本站的时候说无法评论。不应该啊在我的电脑上可以评论啊，怎么到他那就不行了呢？于是我用ipad试了下也不行，加载很长时间也无法显示。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103230117104.png" alt="ipad端访问截图"></p><h2 id="分析">分析</h2><p>我首先想到了IP问题，难道我在MongoDB中限制了访问IP连接？检查是正确的（0.0.0.0就表示支持所有IP连接）。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103230128036.png" alt="MongoDB连接性设置"></p><p>后来我突然想起来难道是代理的原因？于是我在电脑上关掉代理后发现确实访问不了了，而挂上代理就可以。于是我把MongoDB的节点换到了香港区（开始为美国东一区），然而，还是不行…</p><h2 id="解决方法">解决方法</h2><p>请教大佬后，原来vercel的默认域名（*.vercel.app）在大陆出现了些问题，解决方法是再找个域名绑定。</p><p>由于我已经有一个域名&quot;<a href="http://asa-world.cn">asa-world.cn</a>&quot;，只要再配置个二级域名解析过去就可以了。</p><details class="folding-tag" cyan open><summary> 腾讯云添加二级域名 </summary>              <div class='content'>              <ol><li>进入<a href="https://console.dnspod.cn/dns">腾讯云域名控制台</a>，点击<strong>添加记录</strong></li><li>配置相应的记录（左下角也会有相应的提示），记录类型选择CNAME，<a href="http://xn--cname-dq1h016a5a088f752a9q1ctv8b.vercel-dns.com">要指向的域名为cname.vercel-dns.com</a>，点击<strong>确定</strong><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103230139545.png" alt="配置示例"></li><li>二级域名添加成功，你也可以加个监控</li></ol>              </div>            </details><details class="folding-tag" green open><summary> vercel绑定域名 </summary>              <div class='content'>              <ol><li>在vercel中打开你的twikoo项目</li><li>依次点击 <strong>Settings</strong> -&gt; <strong>Domains</strong></li><li>在输入框中输入刚才你设置的二级域名，点击 <strong>ADD</strong><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103230155709.png" alt="vercel绑定二级域名"></li><li>等待其自动连接即可</li><li>最后别忘了在博客主题配置文件中将twikoo配置中的环境ID改为你的二级域名</li></ol>              </div>            </details>]]></content>
-      
-      
-      <categories>
-          
-          <category> 问题修复 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 后端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>【搞笑】博客中js音乐播放问题，直链你最好有事</title>
-      <link href="/fe476b11/"/>
-      <url>/fe476b11/</url>
-      
-        <content type="html"><![CDATA[<h2 id="bug">BUG</h2><p>在本地主机上可以使用Web <em>Audio</em> API中的 .play 播放音乐直链的音频，但在安全域名上则不行，控制台显示410错误。</p><p><img src="https://cdn.jsdelivr.net/gh/asa-pic/pic_1/img/image-20220824182637591.png" alt="控制台报错"></p><h2 id="分析">分析</h2><p>因为在本地主机上可以访问直链，首先排除直链的问题。然后我怀疑是音频加载和dom节点的加载有时间差，导致无法播放，使用 setTimeout 延迟播放后还是不行。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123; xxx; &#125;, <span class="number">5000</span>);  <span class="comment">//5秒后将会调用执行xxx函数</span></span><br></pre></td></tr></table></figure><p>我们先分析下410和404。</p><p>404代码表示请求的资源当前不可用，但它可能在未来的请求中可用。相反，410代码是一个明确的指示，表明所请求的资源曾经存在，但它已被永久删除并且不会将来可用。因此，404响应代码表示用户代理（浏览器）可以重复对同一资源的请求URI，而 410告诉用户代理不要重复对同一资源的请求。</p><p>难道资源真的没了？于是我直接打开了那个音频的直链，结果真的是410，笑死我了，原来直链真的崩了，我猜测直链是有生命周期的，每隔一段时间就会更新。但是奇怪的是在本地主机上访问直链可以，就很离谱，咱也不懂，咱也不敢问。</p><h2 id="解决方法">解决方法</h2><p>打算换个直链，我找了半天酷我的api，找了半天没找到，就找到一个跨域的，直接用js不行，先贴上网站以后备用吧。<a href="https://www.homedt.net/25515.html">https://www.homedt.net/25515.html</a></p><p>后来我发现一个<a href="https://www.codeleading.com/article/60082581961/">教程</a>，听说网易云的直链很好扒，于是就换成了网易云的直链了，真的可以了（不过还是只能解析非会员的。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 问题修复 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>使用SDN网络架构的Ford-Fulkerson算法实践</title>
       <link href="/5c5a2704/"/>
       <url>/5c5a2704/</url>
@@ -848,58 +769,6 @@
             <tag> SDN </tag>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Butterfly主题暗夜模式魔改</title>
-      <link href="/5280f76d/"/>
-      <url>/5280f76d/</url>
-      
-        <content type="html"><![CDATA[<div class="tip warning"><p>适用hexo主题: Butterfly</p></div><p>Butterfly主题转换为暗夜模式全局色调会下降，可通过修改<em>博客根目录/themes/butterfly/source/css/mode/darkmode.styl</em>文件中的background-color的参数来调整暗调的程度。数字越大越暗，数字越小越明亮。</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">   <span class="selector-id">#web_bg</span><span class="selector-pseudo">:before</span>,</span><br><span class="line">    <span class="selector-id">#footer</span><span class="selector-pseudo">:before</span>,</span><br><span class="line">    <span class="selector-id">#page-header</span><span class="selector-pseudo">:before</span></span><br><span class="line">      <span class="attribute">position</span>: absolute</span><br><span class="line">      <span class="attribute">width</span>: <span class="number">100%</span></span><br><span class="line">      <span class="attribute">height</span>: <span class="number">100%</span></span><br><span class="line">-     <span class="attribute">background-color</span>: <span class="built_in">alpha</span>(<span class="variable">$dark</span>-black, .<span class="number">7</span>)</span><br><span class="line">+     <span class="attribute">background-color</span>: <span class="built_in">alpha</span>(<span class="variable">$dark</span>-black, .<span class="number">3</span>)</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 原创干货 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 前端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>困扰久已的微软商店无法使用的问题解决</title>
-      <link href="/74810b/"/>
-      <url>/74810b/</url>
-      
-        <content type="html"><![CDATA[<h2 id="bug">BUG</h2><p>微软商店进不去</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225027376.png" alt="微软商店截图"></p><p>登录账户显示如下</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225041685.png" alt="微软商店账户无法登录"></p><h2 id="解决方法">解决方法</h2><p>网上一些方法都不行</p><blockquote><ol><li><p>在控制面板或者IE浏览器中打开Internet选项，删除Cookie信息。</p></li><li><p>在Internet选项-“高级”菜单中，点击重置，重置网络设置。</p></li><li><p>重启电脑。</p></li><li><p>win+R输入services.msc打开服务，找到Microsoft Account Sign-in Assistant，若没有启动，手动启动该服务。</p></li><li><p>重新尝试登录。</p></li></ol></blockquote><p>后来才发现，原来是我的clash的问题，虽然我用的是规则访问，可能还是有点问题，把他设置成直连也还是不行，把他退出就行了。<s>咱也不懂，咱也不敢问</s></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225101217.png" alt="clash图标"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 问题修复 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 应用程序 </tag>
             
         </tags>
       
@@ -1242,33 +1111,6 @@
     
     
     <entry>
-      <title>Twikoo部署心得</title>
-      <link href="/8289185f/"/>
-      <url>/8289185f/</url>
-      
-        <content type="html"><![CDATA[<p>评论系统比较目前评论系统有很多，各有各的特点，最常见的如valine、gitalk、Livere(来必力)、twikoo等。</p><ul><li>valine简洁、高速，但提醒功能不完善；</li><li>gitalk只支持github登录，国内API不稳定；</li><li>Livere来自韩国，管理功能强大，支持很多社交账号登录，但是网速较慢；</li><li>twikoo比较简洁，可免费使用，支持邮箱甚至微信提醒，但需实名认证。</li></ul><p>我之前用过一段时间的valine,之所以我选择使用twikoo，因为我比较喜欢twikoo的自动补全邮箱和头像的功能，给评论者带来很多方便。</p><hr><h1 id="twikoo部署">twikoo部署</h1><p>twikoo是基于腾讯云开发的一个简洁、安全、免费的静态博客评论系统。详细部署细节可参考<a href="https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2">官方文档</a> 中的“手动部署”。</p><hr><h1 id="部署心得">部署心得</h1><p>本篇文章主要讲述我在部署twikoo的一些技巧。</p><h2 id="免费资源入口-已失效">免费资源入口（已失效）</h2><p>twikoo宣称自己是一个永久免费的系统，话虽如此，其官方文档所指引的腾讯云开发CloudBase无论是包年包月套餐还是按量计费资源包均无免费体验内容，难道twikoo的“免费”要打引号，难道白嫖党只能停步于此了吗？</p><p>经过博主一个小时的苦苦寻找，终于找到了云开发CloudBase的免费体验版，快点<a href="https://cloud.tencent.com/act/free">这里</a> ，找到云开发CloudBase，点击0元试用即可！</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225139828.png" alt="找到云开发CloudBase，点击“0元试用”"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225223177.png" alt="点击“新建环境”"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225239249.png" alt="选择空模板，点击“下一步”"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225302180.png" alt="依次选择“上海”、“包年包月”、“免费版”，“环境名称”不限，点击“下一步”"></p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225318356.png" alt="点击“立即购买即可”"></p><p>其他步骤请参考<a href="https://twikoo.js.org/quick-start.html#%E4%BA%91%E5%87%BD%E6%95%B0%E9%83%A8%E7%BD%B2">官方文档</a> 中的“手动部署”。</p><h2 id="正确添加域名">正确添加域名</h2><p>博主添加域名时输入 “<a href="https://asa-world.github.io/">https://asa-world.github.io/</a> ” 后发现报错。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225337569.png" alt="报错详情"></p><p>一开始以为需要再申请一个万维网的域名，转念一想这也太麻烦了吧，进入官方群询问大佬后发现原来真的只是“格式错误”！</p><p>正确做法为输入“<a href="http://asa-world.github.io">asa-world.github.io</a>”即可。</p><p><img src="https://asa-world-1309727865.cos.ap-chengdu.myqcloud.com/pic/image-20230103225350352.png" alt="正确输入域名"></p><p><del>被自己蠢到</del></p><h2 id="twikoo美化">twikoo美化</h2><p>原始的twikoo评论界面太过简约，而且评论框有亿点小，于是博主开始美化twikoo。</p><p>前端知识入门后，美化不是很难，博主使用的是外部样式表引入的方式。只需要在.\themes\butterfly\source\css目录下新建css文件，输入下面的代码可实现博主自用的美化方案：</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><span class="line">2</span><span class="line">3</span><span class="line">4</span><span class="line">5</span><span class="line">6</span><span class="line">7</span><span class="line">8</span><span class="line">9</span><span class="line">10</span><span class="line">11</span><span class="line">12</span><span class="line">13</span><span class="line">14</span><span class="line">15</span><span class="line">16</span><span class="line">17</span><span class="line">18</span><span class="line">19</span><span class="line">20</span></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Twikoo评论框高度设置 */</span></span><span class="line"><span class="selector-class">.el-textarea__inner</span> &#123;</span><span class="line">    <span class="attribute">min-height</span>: <span class="number">210px</span> <span class="meta">!important</span>;</span><span class="line">  &#125;</span><span class="line">  </span><span class="line"><span class="comment">/* Twikoo评论框添加背景图*/</span></span><span class="line"><span class="selector-class">.el-textarea</span> &#123;</span><span class="line"><span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">https://s2.loli.net/2022/02/06/gy6AcWI4MTjrNVx.gif</span>);</span><span class="line"><span class="attribute">background-size</span>: contain;</span><span class="line"><span class="attribute">background-repeat</span>: no-repeat;</span><span class="line"><span class="attribute">background-position</span>: right;</span><span class="line"><span class="attribute">background-color</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">255</span>, <span class="number">0</span>);</span><span class="line"><span class="attribute">resize</span>: vertical</span><span class="line">&#125;</span><span class="line"></span><span class="line"><span class="comment">/* Twikoo评论框背景图实现点击下移*/</span></span><span class="line"><span class="selector-class">.el-textarea</span><span class="selector-pseudo">:focus</span>-within &#123;</span><span class="line"><span class="attribute">background-position</span>-y: <span class="number">800px</span>;</span><span class="line"><span class="attribute">transition</span>: all <span class="number">0.2s</span> ease-in-out <span class="number">0s</span>;</span><span class="line">&#125;</span></pre></td></tr></table></figure><p>保存后，在主题文件中引入即可。</p><p><img src="https://cdn.jsdelivr.net/gh/asa-pic/pic_1/img/dC7fVBLP8JsUYHK.png" alt="引入外部样式表"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 原创干货 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 博客搭建 </tag>
-            
-            <tag> 后端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>5G基站的开通与调测</title>
       <link href="/51e5371d/"/>
       <url>/51e5371d/</url>
@@ -1288,31 +1130,6 @@
             <tag> 通信相关 </tag>
             
             <tag> 学生竞赛 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>理工男也会写诗，想不到吧</title>
-      <link href="/de5b8c0f/"/>
-      <url>/de5b8c0f/</url>
-      
-        <content type="html"><![CDATA[<p><em>今天整理文件的时候突然翻到大一刚入学写的诗歌，当时好像是参加什么诗歌比赛，以银杏为主题（因为电子科大的银杏很有名），本人还是对诗歌比较感兴趣的，诗歌用极短的文字就能描绘一幅幅动人场景，每一篇诗歌就仿佛一部电影，或感人至深，或发人深省。 这首散文诗自我感觉良好hhhhhh，在文末我会给出我的写作思路，当然如果你能认真读一下，其中的故事和逻辑也很容易理解。</em></p><center><blockquote><p><strong>梦</strong></p><p>裹挟秋光，<br>那个女孩抬头仰望，<br>文杏鎏金，树影婆娑，<br>虽初入成电，<br>一切竟如此熟悉。</p><p>还记得小时候，<br>无数个甜甜的睡梦中，<br>漫天黄蝶触风飘摇，<br>岑寂一切繁华与喧嚣，<br>柔软所有烦恼与苦笑。<br>女孩和男孩追逐打闹，<br>乱了头发，<br>也乱了心梢。</p><p>梦<br>也在男孩心里逐渐扎根。</p><p>回望，<br>树依旧缄默，<br>享受着书墨芬芳，<br>守望着长乐未央，<br>看尽人间岁月长。<br>历尽千帆，<br>成电是他的心之所向，<br>也是素履以往。</p><p>那个女孩熟悉而陌生，<br>从双辫到马尾，<br>从活泼到文静，<br>蓦然相视，笑靥浅浅，<br>她伸手拈来一枚银杏叶，<br>道了声：<br>岁月静好，别来无恙。</p></blockquote></center><span class='nota' data-nota='勤奋的男孩和女孩都考入了心仪的大学——电子科大，他们在银杏树下邂逅，虽初次见面，但有种莫名的熟悉。这是因为在童年的梦中他们已是最好的玩伴。“梦”一语双关，既是小时候的梦，也是两人的人生梦想。（不过反复读来，感觉诗中缺乏两人素未谋面的描写，有种两人小时候既在梦中相识，在现实中也是好友的感觉，欢迎斧正）'>写作思路</span><style>#article-container > center > blockquote {font-size:1.2em;}</style>]]></content>
-      
-      
-      <categories>
-          
-          <category> 原创干货 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 生活向 </tag>
             
         </tags>
       
